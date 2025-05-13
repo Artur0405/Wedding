@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приглашение на свадьбу</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="parallax-container">
+    <div class="parallax-images">
+      <img src="images/img1.jpg" class="img img1" alt="Фото 1">
+      <img src="images/img2.jpg" class="img img2" alt="Фото 2">
+      <img src="images/img3.jpg" class="img img3" alt="Фото 3">
+      <img src="images/img4.jpg" class="img img4" alt="Фото 4">
+      <img src="images/img5.jpg" class="img img5" alt="Фото 5">
+      <img src="images/img6.jpg" class="img img6" alt="Фото 6">
+      <img src="images/img1.jpg" class="img img7" alt="Фото 1">
+      <img src="images/img2.jpg" class="img img8" alt="Фото 2">
+      <img src="images/img3.jpg" class="img img9" alt="Фото 3">
+      <!-- <img src="images/img4.jpg" class="img img10" alt="Фото 4"> -->
+      <!-- <img src="images/img5.jpg" class="img img11" alt="Фото 5"> -->
+      <!-- <img src="images/img6.jpg" class="img img12" alt="Фото 6"> -->
+    </div>
+    <div class="content-overlay">
+      <header>
+        <h1>Вы приглашены!</h1>
+        <p>Присоединяйтесь к празднованию нашей свадьбы<br>15 августа 2025 года в Ереване</p>
+      </header>
+
+      <section class="text-section">
+        <h1>Дорогие друзья и семья!</h1>
+        <p class="p1">С огромной радостью мы приглашаем вас на наш особенный день. Мы хотим разделить с вами момент, который навсегда останется в наших сердцах. Будет очень приятно видеть вас среди наших близких и друзей в этот незабываемый день.</p>
+
+        <p class="p2">Церемония венчания:</p">
+        <p class="p3">Храм Святого Саркиса, улица Сарьяна, 1, Ереван<br>
+                      Начало в 15:00</p">
+
+        <p class="p4">Праздничный ужин:</p>
+        <p class="p5">Загородный ресторан "Армения", шоссе Цахкадзор, 7 км от центра<br>
+        Начало в 17:00</p>
+
+        <p class="p6">Вас ждут уютная атмосфера, изысканные блюда, тосты, музыка и, конечно же, танцы до самого утра!<br>
+        Пожалуйста, сообщите нам, сможете ли вы присутствовать, чтобы мы могли всё подготовить как следует.</p>
+
+        <p class="p7">С любовью и ожиданием встречи,<br>
+        Артур и Ани ♥</p>
+      </section>
+
+      <form>
+        <h2>Подтвердите участие</h2>
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <select name="attendance" required>
+          <option value="">Вы придете?</option>
+          <option value="yes">Да, с радостью</option>
+          <option value="no">К сожалению, не смогу</option>
+        </select>
+        <input type="number" name="guests" placeholder="Количество гостей (включая вас)" min="1" required>
+        <textarea name="message" placeholder="Ваше сообщение (необязательно)"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+      <footer>
+        С любовью, Артур и  ♥<br>
+        Ереван, 2025
+      </footer>
+    </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
