@@ -2,10 +2,10 @@
 html, body {
     /* margin: 0; */
     /* padding: 0; */
-    height: 280%;
+    height: 307%;
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
-    background: rgb(228, 228, 228);
+    background: rgb(255, 255, 255);
   }
 
   body {
@@ -27,45 +27,61 @@ html, body {
     position: fixed;  /* ← раньше было fixed */
     top: 0;
     left: 0;
-    width: 100%;
+    width: 70%;
     height: 300%;
     /* z-index: 1; */
     /* pointer-events: none; */
-    /* transition: transform 0.005s ease-out; */
   }
   
   
   .parallax-images img {
     position:absolute;
     object-fit: cover;
-    border-radius: 40px;
-    /* opacity: 0.3;
-    will-change: transform;
-    transition: transform 0.05s ease-out; */
+    /* border-radius: 40px; */
+    /* opacity: 0.3; */
+    /* will-change: transform; */
+  }
+
+  .img-text {
+    position: absolute;
+    color: white;
+    font-size: 80px;
+    font-family: "Noto Serif Armenian", serif;
+    font-weight: 200;
+    /* text-shadow: 2px 2px 6px black; */
+    z-index: 10; /* выше картинки */
+    pointer-events: none;
   }
   
+  /* Привязка текста к конкретным изображениям */
+  .text1 { top: 25%;  left: 40%; }
+  /* .text2 { top: 12%;  left: 40%; } */
   
   /* Пример размещения картинок */
-  .img1  { top: 5%;   left: 8%;  width: 750px;  height: 900px;  }
-  .img2  { top: 12%;  left: 55%; width: 750px;  height: 900px;  }
-  .img3  { top: 47%;  left: 15%; width: 1250px; height: 1500px; }
-  .img4  { top: 100%; left: 57%; width: 750px;  height: 900px;  }
-  .img5  { top: 115%; left: 3%;  width: 750px;  height: 900px;  }
-  .img6  { top: 145%; left: 51%; width: 850px;  height: 900px;  }
-  .img7  { top: 155%; left: 4%;  width: 750px;  height: 900px;  }
-  .img8  { top: 180%;  left: 55%; width: 750px;  height: 900px;  }
-  .img9  { top: 213%;  left: 10%; width: 950px;  height: 900px;  }
-  /* .img10 { top: 130%; left: 30%; width: 750px;  height: 900px;  } */
-  /* .img11 { top: 160%; left: 8%;  width: 750px;  height: 900px;  } */
-  /* .img12 { top: 170%; left: 55%; width: 750px;  height: 900px;  } */
+  .img1  { top: 0%;   left: 0%;  width: 95%;  height: 50%;  border-radius: 0px;  }
+  .img2  { top: 20%;  left: 55%; width: 41.85%;  height: 28.85%;  }
+  .img3  { top: 55%;  left: 15%; width: 69.75%; height: 48.08%; }
+  .img4  { top: 108%; left: 57%; width: 41.85%;  height: 28.85%;  }
+  .img5  { top: 123%; left: 3%;  width: 41.85%;  height: 28.85%;  }
+  .img6  { top: 153%; left: 51%; width: 47.43%;  height: 28.85%;  }
+  .img7  { top: 163%; left: 4%;  width: 41.85%;  height: 28.85%;  }
+  .img8  { top: 188%;  left: 55%; width: 41.85%;  height: 28.85%;  }
+  .img9  { top: 221%;  left: 10%; width: 53.01%;  height: 28.85%;  }
+  .img10 { top: 258%; left: 3%; width: 41.85%;  height: 28.85%;  }
+  .img11 { top: 268%; left: 50%;  width: 41.85%;  height: 28.85%;  }
+  /* .img12 { top: 170%; left: 55%; width: 41.85%;  height: 28.85%;  } */
   
   /* Содержимое поверх */
   .content-overlay {
     position: relative;
     z-index: 2;
     background-color: rgba(255, 255, 255, 0.0);
+    padding-left: 68%;
+    width: 30%;
     height: 35%;
-    /* transition: transform 0.005s ease-out; */
+    will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
   }
   
   
@@ -84,6 +100,17 @@ html, body {
   header p {
     font-size: 50px;
   }
+
+  .text-section  {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px 20px;
+    font-size: 23px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(200, 200, 200);
+    font-weight: 600;
+    border-radius: 10px;
+  }
   
   /* Основной текст */
   .text-section h1 {
@@ -91,8 +118,8 @@ html, body {
     margin: auto;
     padding: 30px 20px;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 0);
-font-weight: 600;
+    
+    font-weight: 600;
     border-radius: 10px;
     
   }
@@ -101,8 +128,8 @@ font-weight: 600;
     margin: auto;
     padding: 30px 20px;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 0);
-font-weight: 600;
+    
+    font-weight: 600;
     border-radius: 10px;
   }
   .text-section .p2 {
@@ -110,8 +137,8 @@ font-weight: 600;
     margin: auto;
     padding: 30px 20px;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 0);
-font-weight: 600;
+    
+    font-weight: 600;
     border-radius: 10px;
     
   }
@@ -120,8 +147,8 @@ font-weight: 600;
     margin: auto;
     padding: 30px 20px;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 0);
-font-weight: 600;
+    
+    font-weight: 600;
     border-radius: 10px;
     
   }
@@ -130,8 +157,8 @@ font-weight: 600;
     margin: auto;
     padding: 30px 20px;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 0);
-font-weight: 600;
+    
+    font-weight: 600;
     border-radius: 10px;
     
   }
@@ -140,8 +167,8 @@ font-weight: 600;
     margin: auto;
     padding: 30px 20px;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 0);
-font-weight: 600;
+    
+    font-weight: 600;
     border-radius: 10px;
     
   }
@@ -150,8 +177,8 @@ font-weight: 600;
     margin: auto;
     padding: 30px 20px;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 0);
-font-weight: 600;
+    
+    font-weight: 600;
     border-radius: 10px;
     
   }
@@ -160,8 +187,8 @@ font-weight: 600;
     margin: auto;
     padding: 30px 20px;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 0);
-font-weight: 600;
+    
+    font-weight: 600;
     border-radius: 10px;
     
   }
@@ -169,19 +196,31 @@ font-weight: 600;
   /* Форма */
   form {
     background-color: rgba(255, 255, 255, 0.0);
-    padding: 30px;
+    padding: 10px;
+    padding-top: 405%;
     margin: 40px auto;
     max-width: 500px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0);
+    /* top: -500px; */
+    /* bottom: 0px; */
   }
   
   form h2 {
     margin-bottom: 20px;
   }
   
-  input, select, textarea, button {
+  input, textarea, button {
     width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  select {
+    width: 104%;
     margin: 10px 0;
     padding: 10px;
     font-size: 16px;
@@ -192,6 +231,7 @@ font-weight: 600;
   button {
     background-color: #e8a87c;
     color: white;
+    width: 105%;
     border: none;
     cursor: pointer;
   }
@@ -200,7 +240,7 @@ font-weight: 600;
   footer {
     /* position: relative; */
     text-align: center;
-    padding: 20px;
+    /* padding: 20px; */
     font-size: 14px;
     color: #888;
     /* margin-top: 300%; */

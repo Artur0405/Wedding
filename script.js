@@ -1,29 +1,45 @@
-let latestScrollY = 1;
-let ticking = false;
+let currentScroll = 0;
+let targetScroll = 0;
+
+const images = document.querySelector('.parallax-images');
+const content = document.querySelector('.content-overlay');
+
+// Плавность движения (0.08 = мягко, 0.2 = быстрее)
+const ease = 0.8;
 
 function updateParallax() {
-  const scrollY = latestScrollY;
+  // Плавное приближение
+  currentScroll += (targetScroll - currentScroll) * ease;
 
-  const images = document.querySelector('.parallax-images');
+  // Применяем смещение к картинкам
   if (images) {
-    const imageSpeed = 1;
-    images.style.transform = `translateY(${-scrollY * imageSpeed}px)`;
+    images.style.transform = `translate3d(0, ${-currentScroll}px, 0)`;
   }
 
-  const content = document.querySelector('.content-overlay');
+  // Применяем параллакс к тексту
   if (content) {
-    const contentSpeed = 0.8;
-    content.style.transform = `translateY(${scrollY * contentSpeed}px)`;
+    content.style.transform = `translate3d(0, ${currentScroll * 0.8}px, 0)`;
   }
 
-  ticking = false;
+  // Следующий кадр
+  requestAnimationFrame(updateParallax);
 }
 
+// Следим за прокруткой
 window.addEventListener('scroll', () => {
-  latestScrollY = window.scrollY;
-
-  if (!ticking) {
-    window.requestAnimationFrame(updateParallax);
-    ticking = true;
-  }
+  targetScroll = window.scrollY;
 });
+function showImageSizes() {
+  let output = 'Размеры изображений:\n\n';
+
+  document.querySelectorAll('img').forEach((img, index) => {
+    const rect = img.getBoundingClientRect();
+    output += `#${index + 1} — ${rect.width.toFixed(1)}px × ${rect.height.toFixed(1)}px\n`;
+  });
+
+  alert(output);
+}
+
+
+// Старт
+requestAnimationFrame(updateParallax);

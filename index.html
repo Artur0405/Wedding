@@ -5,13 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Приглашение на свадьбу</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="parallax-container">
     <div class="parallax-images">
-      <img src="images/img1.jpg" class="img img1" alt="Фото 1">
-      <img src="images/img2.jpg" class="img img2" alt="Фото 2">
+      <img src="images/IMG_3244.jpg" class="img img1" alt="Фото 1">
+      <div class="img-text text1">Արթուր և<br>
+        Հասմիկ</div>
+      <div class="img-text text2">Հարսանյաց Հրավեր</div>
+      <div class="img-text text3">Արթուր և Հասմիկ</div>
+      <div class="img-text text4">Արթուր և Հասմիկ</div>
+      <!-- <img src="images/img2.jpg" class="img img2" alt="Фото 2"> -->
       <img src="images/img3.jpg" class="img img3" alt="Фото 3">
       <img src="images/img4.jpg" class="img img4" alt="Фото 4">
       <img src="images/img5.jpg" class="img img5" alt="Фото 5">
@@ -19,14 +27,18 @@
       <img src="images/img1.jpg" class="img img7" alt="Фото 1">
       <img src="images/img2.jpg" class="img img8" alt="Фото 2">
       <img src="images/img3.jpg" class="img img9" alt="Фото 3">
-      <!-- <img src="images/img4.jpg" class="img img10" alt="Фото 4"> -->
-      <!-- <img src="images/img5.jpg" class="img img11" alt="Фото 5"> -->
+      <img src="images/img4.jpg" class="img img10" alt="Фото 4">
+      <img src="images/img5.jpg" class="img img11" alt="Фото 5">
       <!-- <img src="images/img6.jpg" class="img img12" alt="Фото 6"> -->
     </div>
     <div class="content-overlay">
       <header>
         <h1>Вы приглашены!</h1>
         <p>Присоединяйтесь к празднованию нашей свадьбы<br>15 августа 2025 года в Ереване</p>
+        <!-- <button onclick="showImageSizes()" style="position:fixed; top:20px; right:20px; z-index:9999;">
+          Показать размеры картинок
+        </button> -->
+        
       </header>
 
       <section class="text-section">
@@ -48,24 +60,23 @@
         Артур и Ани ♥</p>
       </section>
 
-      <form>
-        <h2>Подтвердите участие</h2>
-        <input type="text" name="name" placeholder="Ваше имя" required>
-        <select name="attendance" required>
-          <option value="">Вы придете?</option>
-          <option value="yes">Да, с радостью</option>
-          <option value="no">К сожалению, не смогу</option>
-        </select>
-        <input type="number" name="guests" placeholder="Количество гостей (включая вас)" min="1" required>
-        <textarea name="message" placeholder="Ваше сообщение (необязательно)"></textarea>
-        <button type="submit">Отправить</button>
-      </form>
-      <footer>
-        С любовью, Артур и  ♥<br>
-        Ереван, 2025
-      </footer>
     </div>
-</div>
+  </div>
+  <form>
+    <h2>Подтвердите участие</h2>
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <select name="attendance" required>
+      <option value="">Вы придете?</option>
+      <option value="yes">Да, с радостью</option>
+      <option value="no">К сожалению, не смогу</option>
+    </select>
+    <input type="number" name="guests" placeholder="Количество гостей (включая вас)" min="1" required>
+    <textarea name="message" placeholder="Ваше сообщение (необязательно)"></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+  <footer>
+    With Love, Artur and Hasmik  ♥
+  </footer>
 
 
   <script src="script.js"></script>
