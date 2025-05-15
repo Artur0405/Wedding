@@ -12,6 +12,11 @@ html, body {
     scrollbar-width: none;         /* Firefox */
     -ms-overflow-style: none;      /* IE и Edge */
   }
+
+  body {
+    overscroll-behavior-y: none;
+  }
+  
   
   body::-webkit-scrollbar {        /* Chrome, Safari */
     display: none;
@@ -29,6 +34,7 @@ html, body {
     left: 0;
     width: 70%;
     height: 300%;
+    /* overflow-x: hidden; */
     /* z-index: 1; */
     /* pointer-events: none; */
   }
@@ -73,28 +79,37 @@ html, body {
   
   /* Содержимое поверх */
   .content-overlay {
-    position: relative;
+    position: fixed;
     z-index: 2;
     background-color: rgba(255, 255, 255, 0.0);
     padding-left: 68%;
     width: 30%;
     height: 35%;
-    will-change: transform;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
+    font-family: "Noto Serif Armenian", serif;
+    font-weight: 300;
   }
-  
+
+  #extra-fields {
+    display: none;
+  }
+
+  #guests {
+    display: none;
+  }
   
   /* Заголовок */
   header {
     text-align: center;
     padding: 8px 2px 4px;
-    font-family: 'Great Vibes', cursive;
+    font-family: "Noto Serif Armenian", serif;
+    font-weight: 300;
   }
   
   header h1 {
-    font-size: 90px;
+    font-size: 70px;
     margin-bottom: 0;
+    font-family: "Noto Serif Armenian", serif;
+    font-weight: 500;
   }
   
   header p {
@@ -107,7 +122,7 @@ html, body {
     padding: 30px 20px;
     font-size: 23px;
     background-color: rgba(255, 255, 255, 0);
-    color: rgb(200, 200, 200);
+    color: rgb(0, 0, 0);
     font-weight: 600;
     border-radius: 10px;
   }
@@ -195,15 +210,16 @@ html, body {
   
   /* Форма */
   form {
+    position: absolute;
+    bottom: -837%;
+    right: 35%;
     background-color: rgba(255, 255, 255, 0.0);
-    padding: 10px;
-    padding-top: 405%;
-    margin: 40px auto;
-    max-width: 500px;
+    /* padding: 10px; */
+    /* margin: 40px auto; */
+    width: 30%;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0);
-    /* top: -500px; */
-    /* bottom: 0px; */
+    text-align: center;
   }
   
   form h2 {
@@ -238,11 +254,14 @@ html, body {
   
   /* Подвал */
   footer {
-    /* position: relative; */
+    position: absolute;
+    bottom: -840%;
+    right: 35%;
+    width: 30%;
     text-align: center;
     /* padding: 20px; */
-    font-size: 14px;
-    color: #888;
+    font-size: 16px;
+    color: #464646;
     /* margin-top: 300%; */
   }
   
