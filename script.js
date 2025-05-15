@@ -84,21 +84,21 @@ guestsNumber.addEventListener("input", () => {
   updateExtraGuestsVisibility();
 });
 
-emailjs.init("pdiDqGdKMmFlIL8NF");
-// 📤 Отправка формы через EmailJS
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+// emailjs.init("pdiDqGdKMmFlIL8NF");
+// // 📤 Отправка формы через EmailJS
+// form.addEventListener("submit", function (event) {
+//   event.preventDefault();
 
-  emailjs.sendForm("service_5yfkli5", "template_yzpnxvb", this)
-    .then(() => {
-      alert("Ձեր պատասխանը ուղարկվել է։ Շնորհակալություն ❤️");
-      form.reset();
-      extraFields.style.display = "none";
-    }, (error) => {
-      console.error("Սխալ:", error);
-      alert("Տեղի ունեցավ սխալ։ Խնդրում ենք փորձել ավելի ուշ։");
-    });
-});
+//   emailjs.sendForm("service_nevlnyc", "template_yzpnxvb", this)
+//     .then(() => {
+//       alert("Ձեր պատասխանը ուղարկվել է։ Շնորհակալություն ❤️");
+//       form.reset();
+//       extraFields.style.display = "none";
+//     }, (error) => {
+//       console.error("Սխալ:", error);
+//       alert("Տեղի ունեցավ սխալ։ Խնդրում ենք փորձել ավելի ուշ։");
+//     });
+// });
 // _______________________________________________________________________________________________
 
 function showImageSizes() {
