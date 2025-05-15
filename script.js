@@ -1,3 +1,6 @@
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHR9b9scQzWvN8VSHlmCvzbPopk82FgIi5ht43dDwcjLVTD2pj9h2TqJFWyiAHnifE/exec";
+
+
 let currentScroll = 0;
 let targetScroll = 0;
 
@@ -33,14 +36,10 @@ window.addEventListener('scroll', () => {
 requestAnimationFrame(updateParallax);
 
 // _______________________________________________________________________________________________
-// Показ/скрытие дополнительных полей
-
-
-
 
 const form = document.getElementById("rsvp-form");
 const attendanceSelect = document.getElementById("attendance-select");
-const extraFields = document.getElementById("extra-fields");guests_number
+const extraFields = document.getElementById("extra-fields");
 const guestsNumber = document.getElementById("guests_number")
 const guests = document.getElementById("guests")
 attendanceSelect.addEventListener("change", function () {
@@ -49,14 +48,17 @@ attendanceSelect.addEventListener("change", function () {
     if (guestsNumber.value === "1") {
       extraFields.style.display = "block";
       guests.style.display = "none"
+      guests.required = false
     } else {
       extraFields.style.display = "block";
       guests.style.display = "block"
+      guests.required = true
     }
 
   } else {
     extraFields.style.display = "none";
-    guests.style.display = "block"
+    guests.style.display = "none"
+    guests.required = false
     document.querySelector('input[name="guests"]').value = "";
     document.querySelector('input[name="extra_guests"]').value = "";
     document.querySelector('textarea[name="message"]').value = "";
@@ -71,11 +73,14 @@ function updateExtraGuestsVisibility() {
 
   if (attendanceSelect.value === "Այո" && guestCount > 1) {
     guests.style.display = "block";
+    guests.required = true
   } else {
     guests.style.display = "none";
+    guests.required = false
     form.extra_guests.value = ""; // очищаем, если не нужно
   }
 }
+
 
 guestsNumber.addEventListener("input", () => {
   if (guestsNumber.value < 1) {
@@ -84,21 +89,36 @@ guestsNumber.addEventListener("input", () => {
   updateExtraGuestsVisibility();
 });
 
-// emailjs.init("pdiDqGdKMmFlIL8NF");
-// // 📤 Отправка формы через EmailJS
-// form.addEventListener("submit", function (event) {
-//   event.preventDefault();
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-//   emailjs.sendForm("service_nevlnyc", "template_yzpnxvb", this)
-//     .then(() => {
-//       alert("Ձեր պատասխանը ուղարկվել է։ Շնորհակալություն ❤️");
-//       form.reset();
-//       extraFields.style.display = "none";
-//     }, (error) => {
-//       console.error("Սխալ:", error);
-//       alert("Տեղի ունեցավ սխալ։ Խնդրում ենք փորձել ավելի ուշ։");
-//     });
-// });
+  const formData = new FormData(form);
+
+  fetch(GOOGLE_SCRIPT_URL, {
+    method: "POST",
+    body: formData,
+  })
+    .then((res) => res.text())
+    .then((text) => {
+      if (text.trim() === "OK") {
+        alert("Շնորհակալություն՝ պատասխանի համար ❤️");
+        form.reset();
+        extraFields.style.display = "none";
+        guests.style.display = "none";
+        guests.required = false
+      } else {
+        console.warn("Սերվերի պատասխանը:", text);
+        alert("Տեղի ունեցավ սխալ։ Խնդրում ենք փորձել ավելի ուշ։");
+      }
+    })
+    .catch((err) => {
+      console.error("Fetch սխալ:", err);
+      alert("Տեղի ունեցավ սխալ։ Խնդրում ենք փորձել ավելի ուշ։");
+    });
+  
+  
+  });
+
 // _______________________________________________________________________________________________
 
 function showImageSizes() {

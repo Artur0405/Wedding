@@ -54,7 +54,7 @@
       </section>
     </div>
   </div>
-  <form action="https://script.google.com/macros/s/AKfycbwHR9b9scQzWvN8VSHlmCvzbPopk82FgIi5ht43dDwcjLVTD2pj9h2TqJFWyiAHnifE/exec" method="POST">
+  <form id="rsvp-form">
     <h2>Խնդրում ենք հաստատել մասնակցությունը</h2>
   
     <input type="text" name="name" placeholder="Ձեր անունը" required>
@@ -65,7 +65,7 @@
       <option value="Ոչ">Ցավոք՝ չեմ կարող</option>
     </select>
     <div id="extra_guests">
-      <input id="guests"type="text" name="extra_guests" placeholder="Լրացուցիչ հյուրերի անունները (եթե կան)" min="1" step="1">
+      <input id="guests"type="text" name="extra_guests" placeholder="Լրացուցիչ հյուրերի անունները" min="1" step="1" required>
     </div>
     <div id="extra-fields">
       <input id="guests_number" type="number" name="guests" placeholder="Հյուրերի քանակը (ներառյալ՝ դուք)">
@@ -74,21 +74,12 @@
   
     <button type="submit">Ուղարկել</button>
   </form>
-  <!-- <form action="https://script.google.com/macros/s/AKfycbwHR9b9scQzWvN8VSHlmCvzbPopk82FgIi5ht43dDwcjLVTD2pj9h2TqJFWyiAHnifE/exec" method="POST">
-    <input type="text" name="name" placeholder="Ձեր անունը" required>
-    <select name="attendance" required>...</select>
-    <input type="number" name="guests" min="1">
-    <input type="text" name="extra_guests">
-    <textarea name="message"></textarea>
-    <button type="submit">Ուղարկել</button>
-  </form> -->
   
 
   <footer>
     Սիրով՝ Արթուր և Հասմիկ ♥
   </footer>
 
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script src="script.js?v=0.2"></script>
+  <script src="script.js?v=0.3"></script>
 </body>
 </html>
