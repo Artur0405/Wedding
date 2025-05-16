@@ -4,7 +4,8 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHR9b9scQzWv
 let currentScroll = 0;
 let targetScroll = 0;
 
-const images = document.querySelector('.parallax-images');
+const images = document.querySelectorAll('.parallax-images img');
+const imagesText = document.querySelectorAll('.parallax-images img-text');
 const content = document.querySelector('.content-overlay');
 
 // Плавность движения (0.08 = мягко, 0.2 = быстрее)
@@ -15,9 +16,15 @@ function updateParallax() {
   currentScroll += (targetScroll - currentScroll) * ease;
 
   // Применяем смещение к картинкам
-  if (images) {
-    images.style.transform = `translate3d(0, ${-currentScroll}px, 0)`;
-  }
+
+  images.forEach((img, index) => {
+    const speed = 1; // можно регулировать
+    img.style.transform = `translateY(${-currentScroll * speed}px)`;
+  });
+
+  // if (images) {
+  //   images.style.transform = `translate3d(0, ${-currentScroll}px, 0)`;
+  // }
 
   // Применяем параллакс к тексту
   if (content) {
