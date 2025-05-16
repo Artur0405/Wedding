@@ -8,7 +8,7 @@ const images = document.querySelector('.parallax-images');
 const content = document.querySelector('.content-overlay');
 
 // Плавность движения (0.08 = мягко, 0.2 = быстрее)
-const ease = 0.8;
+const ease = 1;
 
 function updateParallax() {
   // Плавное приближение
@@ -21,7 +21,7 @@ function updateParallax() {
 
   // Применяем параллакс к тексту
   if (content) {
-    content.style.transform = `translate3d(0, ${-currentScroll * 0.25}px, 0)`;
+    content.style.transform = `translate3d(0, ${-currentScroll * 0.23}px, 0)`;
   }
 
   // Следующий кадр
