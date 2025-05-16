@@ -8,7 +8,7 @@ const images = document.querySelector('.parallax-images');
 const content = document.querySelector('.content-overlay');
 
 // Плавность движения (0.08 = мягко, 0.2 = быстрее)
-const ease = 1;
+const ease = 0.8;
 
 function updateParallax() {
   // Плавное приближение
