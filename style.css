@@ -39,6 +39,7 @@ html, body {
     left: 0;
     width: 70%;
     height: 300%;
+    will-change: transform;
     /* overflow-x: hidden; */
     /* z-index: 1; */
     /* pointer-events: none; */
@@ -48,6 +49,7 @@ html, body {
     position:absolute;
     object-fit: cover;
     /* opacity: 0.3; */
+    will-change: transform;
     /* will-change: transform; */
   }
 
