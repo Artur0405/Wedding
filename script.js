@@ -5,7 +5,6 @@ let currentScroll = 0;
 let targetScroll = 0;
 
 const images = document.querySelectorAll('.parallax-images img');
-const imagesText = document.querySelectorAll('.parallax-images img-text');
 const content = document.querySelector('.content-overlay');
 
 // Плавность движения (0.08 = мягко, 0.2 = быстрее)
@@ -18,7 +17,7 @@ function updateParallax() {
   // Применяем смещение к картинкам
 
   images.forEach((img, index) => {
-    const speed = 1; // можно регулировать
+    const speed = 0.9 + index * 0.07; // можно регулировать
     img.style.transform = `translateY(${-currentScroll * speed}px)`;
   });
 
