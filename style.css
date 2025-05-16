@@ -48,7 +48,7 @@ html, body {
 
   .parallax-images img {
     position:absolute;
-    object-fit: cover;
+    object-fit:none;
     /* opacity: 0.3; */
     will-change: auto;
     transform: translateZ(0);
