@@ -21,7 +21,7 @@ function updateParallax() {
 
   // Применяем параллакс к тексту
   if (content) {
-    content.style.transform = `translate3d(0, ${-currentScroll * 0.15}px, 0)`;
+    content.style.transform = `translate3d(0, ${-currentScroll * 0.25}px, 0)`;
   }
 
   // Следующий кадр
