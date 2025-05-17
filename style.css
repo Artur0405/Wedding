@@ -330,7 +330,3 @@ html, body {
     .img10 { top: 168%; left: 3%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
     .img11 { top: 198%; left: 50%; width: 44.85%; height: 28.85%; border-radius: 40px; }
   }
-
-/* 
-  @media screen and (orientation: landscape) and (max-width: 768px) {
-  } */
