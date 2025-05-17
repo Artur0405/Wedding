@@ -1,27 +1,27 @@
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHR9b9scQzWvN8VSHlmCvzbPopk82FgIi5ht43dDwcjLVTD2pj9h2TqJFWyiAHnifE/exec";
 
 
-// При загрузке страницы
-document.addEventListener("DOMContentLoaded", () => {
-  if (
-    window.matchMedia("(orientation: landscape)").matches &&
-    /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
-  ) {
-    document.body.classList.add("mobile-landscape");
-  }
-});
+// // При загрузке страницы
+// document.addEventListener("DOMContentLoaded", () => {
+//   if (
+//     window.matchMedia("(orientation: landscape)").matches &&
+//     /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
+//   ) {
+//     document.body.classList.add("mobile-landscape");
+//   }
+// });
 
-// При смене ориентации
-window.matchMedia("(orientation: landscape)").addEventListener("change", (e) => {
-  if (
-    e.matches &&
-    /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
-  ) {
-    document.body.classList.add("mobile-landscape");
-  } else {
-    document.body.classList.remove("mobile-landscape");
-  }
-});
+// // При смене ориентации
+// window.matchMedia("(orientation: landscape)").addEventListener("change", (e) => {
+//   if (
+//     e.matches &&
+//     /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
+//   ) {
+//     document.body.classList.add("mobile-landscape");
+//   } else {
+//     document.body.classList.remove("mobile-landscape");
+//   }
+// });
 
 
 let currentScroll = 0;
