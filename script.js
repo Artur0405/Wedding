@@ -162,6 +162,25 @@ form.addEventListener("submit", function (e) {
   
   });
 
+  // Прокрутка к началу при обновлении страницы
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 10); // или 100 если нужно чуть позже
+  });
+
+// Скрываем прелоадер после загрузки
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    preloader.style.opacity = "0";
+    preloader.style.pointerEvents = "none";
+    setTimeout(() => {
+      preloader.remove();
+    }, 500); // Через 0.5 сек окончательно удалим
+  }
+});
+
 // _______________________________________________________________________________________________
 
 function showImageSizes() {
