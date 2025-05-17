@@ -41,9 +41,6 @@ html, body {
     height: 300%;
     will-change: auto;
     transform: translateZ(0);
-    /* overflow-x: hidden; */
-    /* z-index: 1; */
-    /* pointer-events: none; */
   }
 
   .parallax-images img {
@@ -75,17 +72,13 @@ html, body {
   
   /* Пример размещения картинок */
   .img1  { top: 0%;   left: 0%;  width: 95%;    height: 50%;    border-radius: 0px; }
-  /* .img2  { top: 20%;  left: 55%; width: 44.85%; height: 28.85%; border-radius: 40px; } */
-  /* .img3  { top: 55%;  left: 15%; width: 69.75%; height: 48.08%; border-radius: 40px; } */
   .img4  { top: 58%;  left: 3%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
   .img5  { top: 73%;  left: 53%; width: 44.85%; height: 28.85%; border-radius: 40px; }
   .img6  { top: 103%; left: 51%; width: 44.85%; height: 28.85%; border-radius: 40px; }
   .img7  { top: 113%; left: 4%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
   .img8  { top: 138%; left: 55%; width: 44.85%; height: 28.85%; border-radius: 40px; }
-  /* .img9  { top: 221%; left: 10%; width: 53.01%; height: 28.85%; border-radius: 40px; } */
   .img10 { top: 168%; left: 3%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
   .img11 { top: 198%; left: 50%; width: 44.85%; height: 28.85%; border-radius: 40px; }
-  /* .img12 { top: 170%; left: 55%; width: 44.85%;  height: 28.85%;  } */
   
   /* Содержимое поверх */
   .content-overlay {
@@ -275,3 +268,36 @@ html, body {
     /* margin-top: 300%; */
   }
   
+
+  @media (max-width: 768px) {
+
+    .parallax-images {
+      position: fixed;  /* ← раньше было fixed */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 300%;
+      will-change: auto;
+      transform: translateZ(0);
+    }
+
+    .content-overlay {
+      position: fixed;
+      z-index: 2;
+      background-color: rgba(255, 255, 255, 0.0);
+      padding-left: 68%;
+      width: 100%;
+      height: 35%;
+      font-family: "Noto Serif Armenian", serif;
+      font-weight: 300;
+    }
+
+    .img1  { top: 0%;   left: 0%;  width: 100%;   height: 50%;    border-radius: 0px; }
+    .img4  { top: 58%;  left: 3%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
+    .img5  { top: 73%;  left: 53%; width: 44.85%; height: 28.85%; border-radius: 40px; }
+    .img6  { top: 103%; left: 51%; width: 44.85%; height: 28.85%; border-radius: 40px; }
+    .img7  { top: 113%; left: 4%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
+    .img8  { top: 138%; left: 55%; width: 44.85%; height: 28.85%; border-radius: 40px; }
+    .img10 { top: 168%; left: 3%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
+    .img11 { top: 198%; left: 50%; width: 44.85%; height: 28.85%; border-radius: 40px; }
+  }
