@@ -39,16 +39,16 @@ html, body {
     left: 0;
     width: 70%;
     height: 300%;
-    will-change: auto;
-    transform: translateZ(0);
+    /* will-change: auto;
+    transform: translateZ(0); */
   }
 
   .parallax-images img {
     position: absolute;
     object-fit: cover;
     /* opacity: 0.3; */
-    will-change: auto;
-    transform: translateZ(0);
+    /* will-change: auto;
+    transform: translateZ(0); */
     /* will-change: transform; */
   }
 
