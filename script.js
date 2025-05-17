@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
   ) {
     document.body.classList.add("mobile-landscape");
+  } else {
+    document.body.classList.remove("mobile-landscape");
   }
 });
 

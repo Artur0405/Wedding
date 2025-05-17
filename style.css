@@ -295,6 +295,10 @@ html, body {
       transform: rotate(360deg);
     }
   }
+
+  #rotate-warning {
+    display: none;
+  }
   
 
   body.mobile-landscape > *:not(#rotate-warning) {
