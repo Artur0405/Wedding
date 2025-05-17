@@ -1,11 +1,38 @@
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHR9b9scQzWvN8VSHlmCvzbPopk82FgIi5ht43dDwcjLVTD2pj9h2TqJFWyiAHnifE/exec";
 
 
+// При загрузке страницы
+document.addEventListener("DOMContentLoaded", () => {
+  if (
+    window.matchMedia("(orientation: landscape)").matches &&
+    /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
+  ) {
+    document.body.classList.add("mobile-landscape");
+  }
+});
+
+// При смене ориентации
+window.matchMedia("(orientation: landscape)").addEventListener("change", (e) => {
+  if (
+    e.matches &&
+    /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
+  ) {
+    document.body.classList.add("mobile-landscape");
+  } else {
+    document.body.classList.remove("mobile-landscape");
+  }
+});
+
+
 let currentScroll = 0;
 let targetScroll = 0;
 
-const images = document.querySelectorAll('.parallax-images img');
+
 const content = document.querySelector('.content-overlay');
+
+  const images = document.querySelectorAll('.parallax-images img');
+  const image = document.querySelector('.parallax-images');
+
 
 // Плавность движения (0.08 = мягко, 0.2 = быстрее)
 const ease = 0.8;
@@ -16,14 +43,24 @@ function updateParallax() {
 
   // Применяем смещение к картинкам
 
-  images.forEach((img, index) => {
-    const speed = 0.9 + index * 0.07; // можно регулировать
-    img.style.transform = `translateY(${-currentScroll * speed}px)`;
-  });
+  if (window.innerWidth <= 768) {
 
-  // if (images) {
-  //   images.style.transform = `translate3d(0, ${-currentScroll}px, 0)`;
-  // }
+    console.log("Mobile script запущен");
+    images.forEach((img, index) => {
+      const speed = 0.9 + index * 0.07; // можно регулировать
+      img.style.transform = `translateY(${-currentScroll * speed}px)`;
+    });
+  } else {
+
+    console.log("Desktop script запущен");
+    if (image) {
+      image.style.transform = `translate3d(0, ${-currentScroll}px, 0)`;
+    }
+  }
+
+  
+
+
 
   // Применяем параллакс к тексту
   if (content) {
