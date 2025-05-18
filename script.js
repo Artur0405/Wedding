@@ -2,8 +2,15 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHR9b9scQzWv
 
 
 
-let screenHeight = window.innerHeight;
+function setFixedVh() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setFixedVh();
+
+let screenHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vh')) * 100;
 let virtualPageHeight = screenHeight * 3.5; // или 4, 5 — сколько "прокрутки" нужно
+
 if (window.innerWidth <= 768) {
   document.getElementById("scroll-wrapper").style.height = virtualPageHeight + "px";
 } else {
@@ -72,16 +79,15 @@ function updateParallax() {
   }
 
   if (window.innerWidth <= 768) {
-
     if (content) {
       content.style.transform = `translate3d(0, ${-currentScroll * 1}px, 0)`;
     }
   } else {
     if (content) {
-      content.style.transform = `translate3d(0, ${-currentScroll * 0.23}px, 0)`;
+      content.style.transform = `translate3d(0, ${-currentScroll * (0.23 * (screenHeight / 1035))}px, 0)`;
     }
     if (contentForm) {
-      contentForm.style.transform = `translate3d(0, ${-currentScroll * 1}px, 0)`;
+      contentForm.style.transform = `translate3d(0, ${-currentScroll * (1 * (screenHeight / 1035))}px, 0)`;
     }
   }
 
