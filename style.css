@@ -336,8 +336,6 @@ html, body {
     body {
       height: unset;
       height: 140%;
-      overflow-y:  auto;
-      background-color: rgba(255, 0, 0, 0.493);
     }
 
     .parallax-container {

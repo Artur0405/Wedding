@@ -1,5 +1,12 @@
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHR9b9scQzWvN8VSHlmCvzbPopk82FgIi5ht43dDwcjLVTD2pj9h2TqJFWyiAHnifE/exec";
 
+// Зафиксировать высоту окна при загрузке
+let fixedHeight = window.innerHeight;
+
+window.addEventListener("load", () => {
+  document.documentElement.style.setProperty('--vh', `${fixedHeight * 0.01}px`);
+});
+
 
 // При загрузке страницы
 document.addEventListener("DOMContentLoaded", () => {
