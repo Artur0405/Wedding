@@ -6,6 +6,8 @@ let screenHeight = window.innerHeight;
 let virtualPageHeight = screenHeight * 3.5; // или 4, 5 — сколько "прокрутки" нужно
 if (window.innerWidth <= 768) {
   document.getElementById("scroll-wrapper").style.height = virtualPageHeight + "px";
+} else {
+  document.getElementById("scroll-wrapper").style.height = virtualPageHeight*2.1 + "px";
 }
 
 
