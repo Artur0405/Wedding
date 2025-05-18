@@ -50,7 +50,7 @@ function updateParallax() {
     console.log("Mobile script запущен");
     images.forEach((img, index) => {
       const speed = index === 0 ? 1 : 1.06; // можно регулировать
-      img.style.transform = `translateY(${-currentScroll * speed}px)`;
+      img.style.transform = `translate3d(0, ${-currentScroll * speed}px, 0)`;
     });
   } else {
 
