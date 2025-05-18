@@ -374,7 +374,7 @@ html, body {
       transform: translateZ(0); */
       /* will-change: transform; */
     }
-    .img1  { top: 0%;   left: 0%;  width: 100%;   height: 50%;    border-radius: 0px; height: 100vh;}
+    .img1  { top: 0%;   left: 0%;  width: 100%;   height: 50%; border-radius: 0px; height: calc(var(--vh, 1vh) * 100); }
     .img4  { top: 157%;  left: 0%;  width: 60%; height: 10%; border-radius: 0px; height: 53vh;}
     .img5  { top: 217%;  left: 40%;  width: 60%; height: 10%; border-radius: 0px; height: 53vh;}
     .img6  { top: 10000%; left: 51%; width: 44.85%; height: 28.85%; border-radius: 40px; }
