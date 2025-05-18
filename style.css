@@ -326,25 +326,34 @@ html, body {
 
   @media (max-width: 768px) {
 
+    body {
+      height: 127%;
+    }
+
+    .parallax-container {
+      position: relative;
+      width: 100%;
+    }
+
     .parallax-images {
       position: fixed;  /* ← раньше было fixed */
       top: 0;
       left: 0;
       width: 100%;
-      height: 300%;
-      will-change: auto;
-      transform: translateZ(0);
+      height: 100%;
+      /* will-change: auto; */
+      /* transform: translateZ(0); */
     }
 
     .content-overlay {
       position: fixed;
-      top: 0;
+      top: 100%;
       left: 0;
       z-index: 2;
-      background-color: rgba(255, 255, 255, 0.0);
-      padding-left: 68%;
+      background-color: rgba(255, 255, 255, 0);
+      padding-left: 0%;
       width: 100%;
-      height: 35%;
+      height: 300%;
       font-family: "Noto Serif Armenian", serif;
       font-weight: 300;
     }
@@ -352,18 +361,247 @@ html, body {
     .parallax-images img {
       position: absolute;
       object-fit: cover;
-      height: 100vh;
       /* opacity: 0.3; */
       /* will-change: auto;
       transform: translateZ(0); */
       /* will-change: transform; */
     }
-    .img1  { top: 0%;   left: 0%;  width: 100%;   height: 50%;    border-radius: 0px; }
-    .img4  { top: 58%;  left: 3%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
-    .img5  { top: 73%;  left: 53%; width: 44.85%; height: 28.85%; border-radius: 40px; }
-    .img6  { top: 103%; left: 51%; width: 44.85%; height: 28.85%; border-radius: 40px; }
-    .img7  { top: 113%; left: 4%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
-    .img8  { top: 138%; left: 55%; width: 44.85%; height: 28.85%; border-radius: 40px; }
-    .img10 { top: 168%; left: 3%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
-    .img11 { top: 198%; left: 50%; width: 44.85%; height: 28.85%; border-radius: 40px; }
+    .img1  { top: 0%;   left: 0%;  width: 100%;   height: 50%;    border-radius: 0px; height: 100vh;}
+    .img4  { top: 157%;  left: 0%;  width: 60%; height: 10%; border-radius: 0px; height: 53vh;}
+    .img5  { top: 217%;  left: 40%;  width: 60%; height: 10%; border-radius: 0px; height: 53vh;}
+    .img6  { top: 10000%; left: 51%; width: 44.85%; height: 28.85%; border-radius: 40px; }
+    .img7  { top: 10000%; left: 4%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
+    .img8  { top: 10000%; left: 55%; width: 44.85%; height: 28.85%; border-radius: 40px; }
+    .img10 { top: 10000%; left: 3%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
+    .img11 { top: 10000%; left: 50%; width: 44.85%; height: 28.85%; border-radius: 40px; }
+  
+
+  header {
+    text-align: center;
+    font-family: "Dzeragir", serif;
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 13%;
+    top: 0%;
+    left: 0;
+    font-size: 23px;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  
+  header h1 {
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 0;
+    font-family: "Dzeragir", serif;
+    font-weight: 500;
+  }
+  
+  header p {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Dzeragir", serif;
+  }
+
+  .text-section  {
+    all: unset;
+    position: absolute;
+  }
+  
+  /* Основной текст */
+  .text-section h1 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 4%;
+    height: 2%;
+    top: 13%;
+    left: 0;
+    font-size: 23px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+
+  .text-section .p1 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+    /* padding: 2%; */
+    height: 5.3%;
+    top: 15%;
+    left: 0;
+    font-size: 23px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p2 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 40%;
+    /* padding: 2%; */
+    height: 1.3%;
+    top: 20.3%;
+    right: 0;
+    font-size: 23px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p3 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 40%;
+    padding-top: 2%;
+    height: 8.4%;
+    top: 21.6%;
+    right: 0;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p4 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
+    height: 8%;
+    top: 30%;
+    left: 0;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p5 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 40%;
+    padding-top: 2%;
+    height: 10%;
+    top: 38%;
+    left: 0;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p6 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
+    height: 10%;
+    top: 48%;
+    left: 0;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p7 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
+    height: 10%;
+    top: 58%;
+    left: 0;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  form {
+    position: absolute;
+    bottom: -240%;
+    right: 10%;
+    background-color: rgba(255, 255, 255, 0.0);
+    /* padding: 10px; */
+    /* margin: 40px auto; */
+    width: 85%;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0);
+    text-align: center;
+    z-index: 10;
+  }
+  
+  form h2 {
+    margin-bottom: 20px;
+  }
+  
+  input, textarea, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  select {
+    width: 104%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #e8a87c;
+    color: white;
+    width: 105%;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Подвал */
+  footer {
+    position: absolute;
+    bottom: -245%;
+    right: unset;
+    width: 100%;
+    text-align: center;
+    /* padding: 20px; */
+    font-size: 16px;
+    color: #464646;
+  }
+  
   }
