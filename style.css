@@ -338,6 +338,10 @@ html, body {
       /* height: 140%; */
     }
 
+    #scroll-wrapper {
+      position: relative;
+      width: 100%;
+    }
     .parallax-container {
       position: fixed;
       width: 100%;

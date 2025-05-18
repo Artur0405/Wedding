@@ -2,16 +2,10 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHR9b9scQzWv
 
 
 
+let screenHeight = window.innerHeight;
+let virtualPageHeight = screenHeight * 3.5; // или 4, 5 — сколько "прокрутки" нужно
 if (window.innerWidth <= 768) {
-
-  window.addEventListener("load", () => {
-    const vh = window.innerHeight;
-  
-    document.body.style.height = vh * 3.5 + "px"; // высота страницы (например, 3 экрана)
-    document.documentElement.style.height = vh * 3 + "px";
-  
-    document.documentElement.style.setProperty('--vh', `${vh * 0.01}px`);
-  }); 
+  document.getElementById("scroll-wrapper").style.height = virtualPageHeight + "px";
 }
 
 
