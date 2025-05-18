@@ -335,7 +335,7 @@ html, body {
 
     body {
       height: unset;
-      height: 140%;
+      /* height: 140%; */
     }
 
     .parallax-container {

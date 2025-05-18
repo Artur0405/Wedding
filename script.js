@@ -1,11 +1,19 @@
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHR9b9scQzWvN8VSHlmCvzbPopk82FgIi5ht43dDwcjLVTD2pj9h2TqJFWyiAHnifE/exec";
 
-// Зафиксировать высоту окна при загрузке
-let fixedHeight = window.innerHeight;
 
-window.addEventListener("load", () => {
-  document.documentElement.style.setProperty('--vh', `${fixedHeight * 0.01}px`);
-});
+
+if (window.innerWidth <= 768) {
+
+  window.addEventListener("load", () => {
+    const vh = window.innerHeight;
+  
+    document.body.style.height = vh * 3.5 + "px"; // высота страницы (например, 3 экрана)
+    document.documentElement.style.height = vh * 3 + "px";
+  
+    document.documentElement.style.setProperty('--vh', `${vh * 0.01}px`);
+  }); 
+}
+
 
 
 // При загрузке страницы
