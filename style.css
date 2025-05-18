@@ -338,7 +338,7 @@ html, body {
     }
 
     .parallax-container {
-      position: relative;
+      position: fixed;
       width: 100%;
     }
 
