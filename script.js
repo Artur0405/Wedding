@@ -30,8 +30,8 @@ let currentScroll = 0;
 let targetScroll = 0;
 
 
-const content = document.querySelector('.content-overlay');
-
+  const content = document.querySelector('.content-overlay');
+  const contentForm = document.querySelector('.content-overlay form');
   const images = document.querySelectorAll('.parallax-images img');
   const image = document.querySelector('.parallax-images');
 
@@ -60,13 +60,18 @@ function updateParallax() {
     }
   }
 
-  
+  if (window.innerWidth <= 768) {
 
-
-
-  // Применяем параллакс к тексту
-  if (content) {
-    content.style.transform = `translate3d(0, ${-currentScroll * 1}px, 0)`;
+    if (content) {
+      content.style.transform = `translate3d(0, ${-currentScroll * 1}px, 0)`;
+    }
+  } else {
+    if (content) {
+      content.style.transform = `translate3d(0, ${-currentScroll * 0.23}px, 0)`;
+    }
+    if (contentForm) {
+      contentForm.style.transform = `translate3d(0, ${-currentScroll * 1}px, 0)`;
+    }
   }
 
   // Следующий кадр

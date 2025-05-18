@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=0.24">
+  <link rel="stylesheet" href="style.css?v=0.25">
 </head>
 <body>
   <div id="preloader">
@@ -59,34 +59,35 @@
         <p class="p7">Սիրով և հանդիպման ակնկալիքով՝<br>
         Արթուր և Հասմիկ ♥</p>
       </section>
+      <form id="rsvp-form">
+        <h2>Խնդրում ենք հաստատել մասնակցությունը</h2>
+      
+        <input type="text" name="name" placeholder="Ձեր անունը" required>
+      
+        <select name="attendance" id="attendance-select" required>
+          <option value="">Կգաք՞ հարսանիքին</option>
+          <option value="Այո">Այո՛, հաճույքով կմասնակցեմ</option>
+          <option value="Ոչ">Ցավոք՝ չեմ կարող</option>
+        </select>
+        <div id="extra_guests">
+          <input id="guests"type="text" name="extra_guests" placeholder="Լրացուցիչ հյուրերի անունները" min="1" step="1" required>
+        </div>
+        <div id="extra-fields">
+          <input id="guests_number" type="number" name="guests" placeholder="Հյուրերի քանակը (ներառյալ՝ դուք)">
+          <textarea name="message" placeholder="Ձեր հաղորդագրությունը (ըստ ցանկության)"></textarea>
+        </div>
+      
+        <button type="submit">Ուղարկել</button>
+        <p>Սիրով՝ Արթուր և Հասմիկ ♥</p>
+      </form>
+      <footer>
+        
+      </footer>
     </div>
   </div>
-  <form id="rsvp-form">
-    <h2>Խնդրում ենք հաստատել մասնակցությունը</h2>
-  
-    <input type="text" name="name" placeholder="Ձեր անունը" required>
-  
-    <select name="attendance" id="attendance-select" required>
-      <option value="">Կգաք՞ հարսանիքին</option>
-      <option value="Այո">Այո՛, հաճույքով կմասնակցեմ</option>
-      <option value="Ոչ">Ցավոք՝ չեմ կարող</option>
-    </select>
-    <div id="extra_guests">
-      <input id="guests"type="text" name="extra_guests" placeholder="Լրացուցիչ հյուրերի անունները" min="1" step="1" required>
-    </div>
-    <div id="extra-fields">
-      <input id="guests_number" type="number" name="guests" placeholder="Հյուրերի քանակը (ներառյալ՝ դուք)">
-      <textarea name="message" placeholder="Ձեր հաղորդագրությունը (ըստ ցանկության)"></textarea>
-    </div>
-  
-    <button type="submit">Ուղարկել</button>
-  </form>
   
 
-  <footer>
-    Սիրով՝ Արթուր և Հասմիկ ♥
-  </footer>
 
-  <script src="script.js?v=0.13"></script>
+  <script src="script.js?v=0.14"></script>
 </body>
 </html>
