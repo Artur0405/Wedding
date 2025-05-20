@@ -2,20 +2,20 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHR9b9scQzWv
 
 
 
-function setFixedVh() {
-  const vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-setFixedVh();
+// function setFixedVh() {
+//   const vh = window.innerHeight * 0.01;
+//   document.documentElement.style.setProperty('--vh', `${vh}px`);
+// }
+// setFixedVh();
 
-let screenHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vh')) * 100;
-let virtualPageHeight = screenHeight * 3.5; // или 4, 5 — сколько "прокрутки" нужно
+// let screenHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vh')) * 100;
+// let virtualPageHeight = screenHeight * 3.5; // или 4, 5 — сколько "прокрутки" нужно
 
-if (window.innerWidth <= 768) {
-  document.getElementById("scroll-wrapper").style.height = virtualPageHeight + "px";
-} else {
-  document.getElementById("scroll-wrapper").style.height = virtualPageHeight*2.1 + "px";
-}
+// if (window.innerWidth <= 768) {
+//   document.getElementById("scroll-wrapper").style.height = virtualPageHeight + "px";
+// } else {
+//   document.getElementById("scroll-wrapper").style.height = virtualPageHeight*2.1 + "px";
+// }
 
 
 

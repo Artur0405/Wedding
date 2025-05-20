@@ -342,6 +342,7 @@ html, body {
 
     #scroll-wrapper {
       position: relative;
+      height: 4000px;
       width: 100%;
     }
     .parallax-container {
