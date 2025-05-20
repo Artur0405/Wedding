@@ -1,21 +1,28 @@
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHR9b9scQzWvN8VSHlmCvzbPopk82FgIi5ht43dDwcjLVTD2pj9h2TqJFWyiAHnifE/exec";
 
 
+function setFixedVh() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
 
-// function setFixedVh() {
-//   const vh = window.innerHeight * 0.01;
-//   document.documentElement.style.setProperty('--vh', `${vh}px`);
-// }
-// setFixedVh();
+document.addEventListener("DOMContentLoaded", () => {
+  setFixedVh();
 
-// let screenHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vh')) * 100;
-// let virtualPageHeight = screenHeight * 3.5; // или 4, 5 — сколько "прокрутки" нужно
+  // Теперь можно безопасно использовать getComputedStyle
+  const vh = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vh'));
+  const screenHeight = vh * 100;
+  const virtualPageHeight = screenHeight * 3.5;
 
-// if (window.innerWidth <= 768) {
-//   document.getElementById("scroll-wrapper").style.height = virtualPageHeight + "px";
-// } else {
-//   document.getElementById("scroll-wrapper").style.height = virtualPageHeight*2.1 + "px";
-// }
+  const scrollWrapper = document.getElementById("scroll-wrapper");
+  if (!scrollWrapper) return;
+
+  if (window.innerWidth <= 768) {
+    scrollWrapper.style.height = virtualPageHeight + "px";
+  } else {
+    scrollWrapper.style.height = virtualPageHeight * 2.1 + "px";
+  }
+});
 
 
 
