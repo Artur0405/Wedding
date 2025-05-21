@@ -1,0 +1,169 @@
+header {
+    text-align: center;
+    font-family: "Dzeragir", serif;
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 13);
+    top: 0%;
+    left: 0;
+    font-size: 23px;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  
+  header h1 {
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 0;
+    font-family: "Dzeragir", serif;
+    font-weight: 500;
+  }
+  
+  header p {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Dzeragir", serif;
+  }
+
+  .text-section  {
+    all: unset;
+    position: absolute;
+  }
+  
+  /* Основной текст */
+  .text-section h1 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 4%;
+    height: calc(var(--vh, 1vh) * 2);
+    top: calc(var(--vh, 1vh) * 13);
+    left: 0;
+    font-size: 23px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+
+  .text-section .p1 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 6);
+    top: calc(var(--vh, 1vh) * 15);
+    left: 0;
+    font-size: 23px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p2 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 40%;
+    height: calc(var(--vh, 1vh) * 1.3);
+    top: calc(var(--vh, 1vh) * 21);
+    right: 0;
+    font-size: 23px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p3 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 40%;
+    padding-top: 2%;
+    height: calc(var(--vh, 1vh) * 8.4);
+    top: calc(var(--vh, 1vh) * 22.3);
+    right: 0;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p4 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
+    height: calc(var(--vh, 1vh) * 8);
+    top: calc(var(--vh, 1vh) * 30);
+    left: 0;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p5 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 40%;
+    padding-top: 2%;
+    height: calc(var(--vh, 1vh) * 10);
+    top: calc(var(--vh, 1vh) * 38);
+    left: 0;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p6 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
+    height: calc(var(--vh, 1vh) * 10);
+    top: calc(var(--vh, 1vh) * 48);
+    left: 0;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p7 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
+    height: calc(var(--vh, 1vh) * 10);
+    top: calc(var(--vh, 1vh) * 58);
+    left: 0;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    border-radius: 0px;
+  }
