@@ -4,6 +4,8 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHR9b9scQzWv
 function setFixedVh() {
   const vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
+  console.log("Высота экрана:", window.innerHeight);
+  console.log("1vh =", vh + "px");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
