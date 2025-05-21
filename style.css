@@ -368,7 +368,7 @@ html, body {
       background-color: rgba(255, 255, 255, 0);
       padding-left: 0%;
       width: 100%;
-      height: 3000px;
+      height: 300%;
       font-family: "Noto Serif Armenian", serif;
       font-weight: 300;
     }
@@ -381,14 +381,14 @@ html, body {
       transform: translateZ(0); */
       /* will-change: transform; */
     }
-    .img1  { top: 0%;   left: 0%;  width: 100%;   height: 50%; border-radius: 0px; height: calc(var(--vh, 1vh) * 100); }
+    /* .img1  { top: 0%;   left: 0%;  width: 100%;   height: 50%; border-radius: 0px; height: calc(var(--vh, 1vh) * 100); }
     .img4  { top: 157%;  left: 0%;  width: 60%; height: 10%; border-radius: 0px; height: calc(var(--vh, 1vh) * 53);}
     .img5  { top: 217%;  left: 40%;  width: 60%; height: 10%; border-radius: 0px; height: calc(var(--vh, 1vh) * 53);}
     .img6  { top: 10000%; left: 51%; width: 44.85%; height: 28.85%; border-radius: 40px; }
     .img7  { top: 10000%; left: 4%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
     .img8  { top: 10000%; left: 55%; width: 44.85%; height: 28.85%; border-radius: 40px; }
     .img10 { top: 10000%; left: 3%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
-    .img11 { top: 10000%; left: 50%; width: 44.85%; height: 28.85%; border-radius: 40px; }
+    .img11 { top: 10000%; left: 50%; width: 44.85%; height: 28.85%; border-radius: 40px; } */
 
     .img-text {
       position: absolute;
