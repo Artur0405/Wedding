@@ -8,25 +8,20 @@ function setFixedVh() {
   console.log("1vh =", vh + "px");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  setFixedVh();
+function setFixedVh() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setFixedVh();
 
-  // Теперь можно безопасно использовать getComputedStyle
-  const vh = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vh'));
-  const screenHeight = vh * 100;
-  const virtualPageHeight = screenHeight * 3.5;
+let screenHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vh')) * 100;
+let virtualPageHeight = screenHeight * 3.5; // или 4, 5 — сколько "прокрутки" нужно
 
-  const scrollWrapper = document.getElementById("scroll-wrapper");
-  if (!scrollWrapper) return;
-
-  if (window.innerWidth <= 768) {
-    scrollWrapper.style.height = virtualPageHeight + "px";
-  } else {
-    scrollWrapper.style.height = virtualPageHeight * 2.1 + "px";
-  }
-});
-
-
+if (window.innerWidth <= 768) {
+  document.getElementById("scroll-wrapper").style.height = virtualPageHeight + "px";
+} else {
+  document.getElementById("scroll-wrapper").style.height = virtualPageHeight*2.1 + "px";
+}
 
 // При загрузке страницы
 document.addEventListener("DOMContentLoaded", () => {
