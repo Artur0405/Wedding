@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=0.44">
+  <link rel="stylesheet" href="style.css?v=0.45">
 </head>
 <body>
   <div id="scroll-wrapper"></div>
@@ -41,7 +41,6 @@
           <h1>Հրավիրատոմս</h1>
           <p>Սիրով հրավիրում ենք մեր հարսանիքին<br>2025 թ. հուլիսի 19-ին</p>
         </header>
-
         <section class="text-section">
           <h1>Սիրելի բարեկամներ և ընտանիք</h1>
           <p class="p1">Մեծ ուրախությամբ հրավիրում ենք ձեզ մեր կյանքի հատուկ օրվա տոնակատարությանը։ Ցանկանում ենք կիսել այս անմոռանալի պահը ձեզ հետ։ Մեզ համար շատ հաճելի կլինի տեսնել ձեզ մեր կողքին այդ օրը։</p>
@@ -59,36 +58,31 @@
 
           <p class="p7">Սիրով և հանդիպման ակնկալիքով՝<br>
           Արթուր և Հասմիկ ♥</p>
+          <form id="rsvp-form">
+            <h2>Խնդրում ենք հաստատել մասնակցությունը</h2>
+          
+            <input type="text" name="name" placeholder="Ձեր անունը" required>
+          
+            <select name="attendance" id="attendance-select" required>
+              <option value="">Կգաք՞ հարսանիքին</option>
+              <option value="Այո">Այո՛, հաճույքով կմասնակցեմ</option>
+              <option value="Ոչ">Ցավոք՝ չեմ կարող</option>
+            </select>
+            <div id="extra_guests">
+              <input id="guests"type="text" name="extra_guests" placeholder="Լրացուցիչ հյուրերի անունները" min="1" step="1" required>
+            </div>
+            <div id="extra-fields">
+              <input id="guests_number" type="number" name="guests" placeholder="Հյուրերի քանակը (ներառյալ՝ դուք)">
+              <textarea name="message" placeholder="Ձեր հաղորդագրությունը (ըստ ցանկության)"></textarea>
+            </div>
+          
+            <button type="submit">Ուղարկել</button>
+            <p>Սիրով՝ Արթուր և Հասմիկ ♥</p>
+          </form>
         </section>
-        <form id="rsvp-form">
-          <h2>Խնդրում ենք հաստատել մասնակցությունը</h2>
-        
-          <input type="text" name="name" placeholder="Ձեր անունը" required>
-        
-          <select name="attendance" id="attendance-select" required>
-            <option value="">Կգաք՞ հարսանիքին</option>
-            <option value="Այո">Այո՛, հաճույքով կմասնակցեմ</option>
-            <option value="Ոչ">Ցավոք՝ չեմ կարող</option>
-          </select>
-          <div id="extra_guests">
-            <input id="guests"type="text" name="extra_guests" placeholder="Լրացուցիչ հյուրերի անունները" min="1" step="1" required>
-          </div>
-          <div id="extra-fields">
-            <input id="guests_number" type="number" name="guests" placeholder="Հյուրերի քանակը (ներառյալ՝ դուք)">
-            <textarea name="message" placeholder="Ձեր հաղորդագրությունը (ըստ ցանկության)"></textarea>
-          </div>
-        
-          <button type="submit">Ուղարկել</button>
-          <p>Սիրով՝ Արթուր և Հասմիկ ♥</p>
-        </form>
-        <footer>
-
-        </footer>
       </div>
     </div>
-
-
   </div>
-  <script src="script.js?v=0.26"></script>
+  <script src="script.js?v=0.27"></script>
 </body>
 </html>

@@ -20,7 +20,7 @@ let virtualPageHeight = screenHeight * 3.5; // или 4, 5 — сколько "�
 if (window.innerWidth <= 768) {
   document.getElementById("scroll-wrapper").style.height = virtualPageHeight + "px";
 } else {
-  document.getElementById("scroll-wrapper").style.height = virtualPageHeight*2.1 + "px";
+  document.getElementById("scroll-wrapper").style.height = virtualPageHeight * ((42474.6504/window.innerHeight) ** (1/5)) + "px";
 }
 
 // При загрузке страницы
@@ -58,13 +58,14 @@ let targetScroll = 0;
   const image = document.querySelector('.parallax-images');
 
 
-// Плавность движения (0.08 = мягко, 0.2 = быстрее)
 const ease = 0.8;
 
 function updateParallax() {
-  // Плавное приближение
   currentScroll += (targetScroll - currentScroll) * ease;
-
+  const scrollHeight = document.body.scrollHeight;
+  const viewportHeight = window.innerHeight;
+  const scrollRatio = currentScroll / (scrollHeight - viewportHeight);
+  const x = 0.0000007044 * screenHeight**2 - 0.0017036 * screenHeight + 1.2415768;
   // Применяем смещение к картинкам
 
   if (window.innerWidth <= 768) {
@@ -87,12 +88,22 @@ function updateParallax() {
       content.style.transform = `translate3d(0, ${-currentScroll * 1}px, 0)`;
     }
   } else {
+    // currentScroll * x * scrollRatio = 1700
+    // x = 1700 / (currentScroll * scrollRatio)
+    // ScrollSpeed / scrollRatio = 1700
     if (content) {
-      content.style.transform = `translate3d(0, ${-currentScroll * (0.23 * (screenHeight / 1035))}px, 0)`;
+      content.style.transform = `translate3d(0, ${-currentScroll * (x)}px, 0)`;
+      // console.log("scrollHeight:", scrollHeight);
+      // console.log("viewportHeight:", viewportHeight);
+      // console.log("currentScroll:", currentScroll);
+      // console.log("scrollRatio:", scrollRatio);
+      // console.log("ffffffffffff:", -currentScroll * (x));
+      // console.log("ffffffffffff:", x);
+      
     }
-    if (contentForm) {
-      contentForm.style.transform = `translate3d(0, ${-currentScroll * (1 * (screenHeight / 1035))}px, 0)`;
-    }
+    // if (contentForm) {
+    //   contentForm.style.transform = `translate3d(0, ${-currentScroll * (2.63)}px, 0)`;
+    // }
   }
 
   // Следующий кадр
