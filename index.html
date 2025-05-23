@@ -1,46 +1,88 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="hy">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Размер окна</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 100px;
-    }
-
-    button {
-      padding: 12px 24px;
-      font-size: 18px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    #result {
-      margin-top: 20px;
-      font-size: 20px;
-      color: #333;
-    }
-  </style>
+  <title>Հարսանյաց Հրավեր</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=0.46">
 </head>
 <body>
+  <div id="scroll-wrapper"></div>
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>  
+    <div id="rotate-warning">
+      Խնդրում ենք օգտագործել կայքը ուղղահայաց ռեժիմում 📱<br>
+      Խնդրում ենք պտտել հեռախոսը 🔁📱
+    </div>
+    <div class="parallax-container">
+      <div class="parallax-images">
+        <img src="images/IMG_3244.jpg" class="img img1" alt="Լուսանկար 1">
+        <div class="img-text text1">Արթուր և</div>
+        <div class="img-text text2">Հասմիկ</div>
+        <div class="img-text text3">Արթուր և Հասմիկ</div>
+        <div class="img-text text4">Արթուր և Հասմիկ</div>
+        <!-- <img src="images/img3.jpg" class="img img3" alt="Լուսանկար 3"> -->
+        <img src="images/img4.jpg" class="img img4" alt="Լուսանկար 4">
+        <img src="images/img5.jpg" class="img img5" alt="Լուսանկար 5">
+        <img src="images/img6.jpg" class="img img6" alt="Լուսանկար 6">
+        <img src="images/img1.jpg" class="img img7" alt="Լուսանկար 1">
+        <img src="images/img2.jpg" class="img img8" alt="Լուսանկար 2">
+        <!-- <img src="images/img3.jpg" class="img img9" alt="Լուսանկար 3"> -->
+        <img src="images/img4.jpg" class="img img10" alt="Լուսանկար 4">
+        <img src="images/img5.jpg" class="img img11" alt="Լուսանկար 5">
+      </div>
+      <div class="content-overlay">
+        <header>
+          <h1>Հրավիրատոմս</h1>
+          <p>Սիրով հրավիրում ենք մեր հարսանիքին<br>2025 թ. հուլիսի 19-ին</p>
+        </header>
+        <section class="text-section">
+          <h1>Սիրելի բարեկամներ և ընտանիք</h1>
+          <p class="p1">Մեծ ուրախությամբ հրավիրում ենք ձեզ մեր կյանքի հատուկ օրվա տոնակատարությանը։ Ցանկանում ենք կիսել այս անմոռանալի պահը ձեզ հետ։ Մեզ համար շատ հաճելի կլինի տեսնել ձեզ մեր կողքին այդ օրը։</p>
 
-  <button onclick="showSize()">Узнать размер CSS-окна</button>
-  <div id="result"></div>
+          <p class="p2">Պսակադրություն՝</p>
+          <p class="p3">Սուրբ Աստվածածին Եկեղեցի <br><br>ք. Երևան, Նորք-Մարաշ, Ա.Արմենակյան 225<br><br>
+          Սկիզբը՝ 15:00</p>
 
-  <script>
-    function showSize() {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      document.getElementById('result').textContent =
-        `CSS-ширина: ${width}px, CSS-высота: ${height}px`;
-    }
-  </script>
+          <p class="p4">Տոնական ընթրիք՝</p>
+          <p class="p5">«Հայաստան» ամառային ռեստորան, Ծաղկաձորի խճուղի, կենտրոնից 7 կմ հեռավորության վրա<br>
+          Սկիզբը՝ 17:00</p>
 
+          <p class="p6">Ձեզ սպասում են ջերմ մթնոլորտ, համեղ ուտեստներ, կենացներ, երաժշտություն և իհարկե՝ պարեր մինչ առավոտ։<br>
+          Խնդրում ենք տեղեկացնել, արդյոք կկարողանաք ներկա գտնվել՝ որպեսզի մենք կարողանանք ամեն բան պատշաճ պատրաստել։</p>
+
+          <p class="p7">Սիրով և հանդիպման ակնկալիքով՝<br>
+          Արթուր և Հասմիկ ♥</p>
+          <form id="rsvp-form">
+            <h2>Խնդրում ենք հաստատել մասնակցությունը</h2>
+          
+            <input type="text" name="name" placeholder="Ձեր անունը" required>
+          
+            <select name="attendance" id="attendance-select" required>
+              <option value="">Կգաք՞ հարսանիքին</option>
+              <option value="Այո">Այո՛, հաճույքով կմասնակցեմ</option>
+              <option value="Ոչ">Ցավոք՝ չեմ կարող</option>
+            </select>
+            <div id="extra_guests">
+              <input id="guests"type="text" name="extra_guests" placeholder="Լրացուցիչ հյուրերի անունները" min="1" step="1" required>
+            </div>
+            <div id="extra-fields">
+              <input id="guests_number" type="number" name="guests" placeholder="Հյուրերի քանակը (ներառյալ՝ դուք)">
+              <textarea name="message" placeholder="Ձեր հաղորդագրությունը (ըստ ցանկության)"></textarea>
+            </div>
+          
+            <button type="submit">Ուղարկել</button>
+            <p>Սիրով՝ Արթուր և Հասմիկ ♥</p>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="script.js?v=0.27"></script>
 </body>
 </html>

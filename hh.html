@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Размер окна</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="showSize()">Узнать размер CSS-окна</button>
+  <div id="result"></div>
+
+  <script>
+    function showSize() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      document.getElementById('result').textContent =
+        `CSS-ширина: ${width}px, CSS-высота: ${height}px`;
+    }
+  </script>
+
+</body>
+</html>
