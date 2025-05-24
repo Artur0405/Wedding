@@ -135,14 +135,13 @@ attendanceSelect.addEventListener("change", function () {
     document.querySelector('input[name="guests"]').value = "1";
     if (guestsNumber.value === "1") {
       extraFields.style.display = "block";
-      guests.style.display = "none"
-      guests.required = false
+      // guests.style.display = "none"
+      // guests.required = false
     } else {
       extraFields.style.display = "block";
-      guests.style.display = "block"
-      guests.required = true
+      // guests.style.display = "block"
+      // guests.required = true
     }
-
   } else {
     extraFields.style.display = "none";
     guests.style.display = "none"
@@ -296,7 +295,12 @@ function updateCountdown() {
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
   const seconds = Math.floor((diff / 1000) % 60);
 
-  countdownEl.innerText = `${days} օր ${hours} ժ ${minutes} ր ${seconds} վ`;
+  countdownEl.innerHTML = `
+  <div class="time-block"><div class="number">${days}</div><div class="label">Օր</div></div>
+  <div class="time-block"><div class="number">${hours}</div><div class="label">Ժամ</div></div>
+  <div class="time-block"><div class="number">${minutes}</div><div class="label">Րոպե</div></div>
+  <div class="time-block"><div class="number">${seconds}</div><div class="label">Վայրկյան</div></div>
+`;
 }
 
 updateCountdown();

@@ -381,10 +381,10 @@ html, body {
 
     .parallax-images {
       position: absolute;  /* ← раньше было fixed */
-      top: 0;
+      top: calc(var(--vh, 1vh) * 0);
       left: 0;
       width: calc(var(--vw, 1vw) * 100);
-      height: calc(var(--vh, 1vh) * 1000);
+      height: calc(var(--vh, 1vh) * 400);
       z-index: 0;
       overflow-y: scroll;
       background-color: rgba(0,0,0,0);
@@ -400,7 +400,7 @@ html, body {
       z-index: 2;
       padding-left: 0%;
       width: 100%;
-      height: calc(var(--vh, 1vh) * 1000);
+      height: calc(var(--vh, 1vh) * 400);
       font-family: "Noto Serif Armenian", serif;
       font-weight: 300;
       z-index: 200;
@@ -443,6 +443,45 @@ html, body {
     .text1 { top: calc(var(--vh, 1vh) * 45);  left: calc(var(--vw, 1vw) * 30); position: absolute;}
     .text2 { top: calc(var(--vh, 1vh) * 53);  left: calc(var(--vw, 1vw) * 30); letter-spacing: 7px;}
   
+
+  #countdown {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+  
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 15px 20px;
+    max-width: 400px;
+    margin: 8% auto;
+  
+    /* box-shadow: 0 4px 12px rgba(255, 0, 0, 0.499); */
+    transition: all 0.3s ease;
+  }
+
+  .time-block {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .time-block .number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .time-block .label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    margin-top: 4px;
+  }
 
   header {
     text-align: center;
@@ -611,7 +650,7 @@ html, body {
     left: 0;
     line-height: 30px;
     font-size: 20px;
-        background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
     font-weight: 400;
     border-radius: 0px;
   }
@@ -632,17 +671,15 @@ html, body {
     font-weight: 400;
     border-radius: 0px;
   }
+
   form {
     all: unset;
     position: absolute;
     margin-top: unset;
     height: calc(var(--vh, 1vh) * 10);
     top: calc(var(--vh, 1vh) * 323);
-    right: 10%;
     background-color: rgb(255, 255, 255);
-    /* padding: 10px; */
-    /* margin: 40px auto; */
-    width: 85%;
+    width: calc(var(--vw, 1vw) * 100);
     align-items: center;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0);
@@ -651,18 +688,19 @@ html, body {
   }
   
   form h2 {
-    text-align: center;
-    width: 105%;
+    /* text-align: center; */
+    width: calc(var(--vw, 1vw) * 85);
     margin-bottom: 15px;
   }
   form h2 {
-    text-align: center;
-    width: 105%;
+    /* text-align: center ; */
+    width: calc(var(--vw, 1vw) * 85);
   }
   
   input, textarea, button {
-    width: 100%;
-    margin: 10px 0;
+    width: calc(var(--vw, 1vw) * 85);
+    margin: 10px auto;
+    background-color: #ffffff;
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -670,23 +708,23 @@ html, body {
   }
 
   select {
-    width: 104%;
+    width: calc(var(--vw, 1vw) * 88);
     margin: 10px 0;
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #ccc;
   }
-  
+
   button {
     background-color: #e8a87c;
     color: white;
-    width: 105%;
+    width: calc(var(--vw, 1vw) * 75);
     border: none;
     cursor: pointer;
   }
   
-  /* Подвал */
+  /* Подвал
   footer {
     position: absolute;
     margin-top: 0;
@@ -696,10 +734,10 @@ html, body {
     top: 67%;
     width: 100%;
     text-align: center;
-    /* margin-top: 6%; */
-    /* padding: 20px; */
+    margin-top: 6%;
+    padding: 20px;
     font-size: 16px;
     color: #464646;
   }
-  
+   */
   }
