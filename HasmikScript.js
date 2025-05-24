@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyuR5LnF3xWxNICdArS2MBHd6JDaZQZQL0q6ICpU-BgSEK9nyYK_vCdnR9BeAIXwa7_/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzh9WsIHm0fWvJ_Vew9oMoQG_NjETIhOmWN8qtAsLtrJ-X58xZ-w9LEKkDm2BzTzxxXvg/exec";
 
 
 function setFixedVh() {
