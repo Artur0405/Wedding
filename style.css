@@ -214,6 +214,24 @@ html, body {
     border-radius: 10px;
     
   }
+
+  #countdown {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+  
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 15px 20px;
+    max-width: 300px;
+    margin: 8% auto;
+  
+    /* box-shadow: 0 4px 12px rgba(255, 0, 0, 0.499); */
+    transition: all 0.3s ease;
+  }
   
   /* Форма */
   form {
@@ -354,7 +372,7 @@ html, body {
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 1;
+      z-index: 0;
       /* will-change: auto; */
       /* transform: translateZ(0); */
     }
@@ -370,6 +388,7 @@ html, body {
       height: 300%;
       font-family: "Noto Serif Armenian", serif;
       font-weight: 300;
+      z-index: 20;
     }
 
     .parallax-images img {
@@ -381,8 +400,8 @@ html, body {
       /* will-change: transform; */
     }
     .img1  { top: 0%;   left: 0%;  width: 100%;   height: 50%; border-radius: 0px; height: calc(var(--vh, 1vh) * 100); }
-    .img4  { top: calc(var(--vh, 1vh) * 157);  left: 0%;  width: 60%; height: 10%; border-radius: 0px; height: calc(var(--vh, 1vh) * 53);}
-    .img5  { top: calc(var(--vh, 1vh) * 217);  left: 40%;  width: 60%; height: 10%; border-radius: 0px; height: calc(var(--vh, 1vh) * 53);}
+    .img4  { top: calc(var(--vh, 1vh) * 163);  left: 0%;  width: 60%; height: 10%; border-radius: 0px; height: calc(var(--vh, 1vh) * 53);}
+    .img5  { top: calc(var(--vh, 1vh) * 223);  left: 40%;  width: 60%; height: 10%; border-radius: 0px; height: calc(var(--vh, 1vh) * 53);}
     .img6  { top: 10000%; left: 51%; width: 44.85%; height: 28.85%; border-radius: 40px; }
     .img7  { top: 10000%; left: 4%;  width: 44.85%; height: 28.85%; border-radius: 40px; }
     .img8  { top: 10000%; left: 55%; width: 44.85%; height: 28.85%; border-radius: 40px; }
@@ -416,11 +435,11 @@ html, body {
     box-sizing: border-box;
     display: block;
     width: 100%;
-    height: 13%;
+    height: calc(var(--vh, 1vh) * 37);
     top: 0%;
     left: 0;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
   }
@@ -442,7 +461,6 @@ html, body {
   .text-section  {
     all: unset;
     position: absolute;
-    z-index: 20;
   }
   
   /* Основной текст */
@@ -454,11 +472,11 @@ html, body {
     text-align: center;
     width: 100%;
     padding-top: 4%;
-    height: 2%;
-    top: 13%;
+    height: calc(var(--vh, 1vh) * 8);
+    top: calc(var(--vh, 1vh) * 37);
     left: 0;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
   }
@@ -470,11 +488,11 @@ html, body {
     display: block;
     text-align: center;
     width: 100%;
-    height: 6%;
-    top: 15%;
+    height: calc(var(--vh, 1vh) * 22);
+    top: calc(var(--vh, 1vh) * 45);
     left: 0;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
   }
@@ -485,11 +503,11 @@ html, body {
     display: block;
     text-align: center;
     width: 40%;
-    height: 1.3%;
-    top: 21%;
+    height: calc(var(--vh, 1vh) * 5);
+    top: calc(var(--vh, 1vh) * 67);
     right: 0;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
   }
@@ -501,12 +519,12 @@ html, body {
     text-align: center;
     width: 40%;
     padding-top: 2%;
-    height: 8.4%;
-    top: 22.3%;
+    height: calc(var(--vh, 1vh) * 30);
+    top: calc(var(--vh, 1vh) * 72);
     right: 0;
     line-height: 30px;
     font-size: 20px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
   }
@@ -518,12 +536,12 @@ html, body {
     text-align: center;
     width: 100%;
     padding-top: 2%;
-    height: 8%;
-    top: 30%;
+    height: calc(var(--vh, 1vh) * 20);
+    top: calc(var(--vh, 1vh) * 102);
     left: 0;
     line-height: 30px;
-    font-size: 20px;
-    background-color: rgba(255, 255, 255, 1);
+    font-size: 23px;
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
   }
@@ -535,32 +553,34 @@ html, body {
     text-align: center;
     width: 40%;
     padding-top: 2%;
-    height: 9.7%;
-    top: 38%;
+    height: calc(var(--vh, 1vh) * 5);
+    top: calc(var(--vh, 1vh) * 122);
     left: 0;
     line-height: 30px;
     font-size: 20px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
   }
+
   .text-section .p6 {
     all: unset;
     position: fixed;
     box-sizing: border-box;
     display: block;
     text-align: center;
-    width: 100%;
+    width: 40%;
     padding-top: 2%;
-    height: 10%;
-    top: 47%;
+    height: calc(var(--vh, 1vh) * 30);
+    top: calc(var(--vh, 1vh) * 127);
     left: 0;
     line-height: 30px;
     font-size: 20px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
   }
+
   .text-section .p7 {
     all: unset;
     position: fixed;
@@ -569,8 +589,25 @@ html, body {
     text-align: center;
     width: 100%;
     padding-top: 2%;
-    height: 10%;
-    top: 58%;
+    height: calc(var(--vh, 1vh) * 20);
+    top: calc(var(--vh, 1vh) * 157);
+    left: 0;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  .text-section .p8 {
+    all: unset;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
+    height: calc(var(--vh, 1vh) * 10);
+    top: calc(var(--vh, 1vh) * 177);
     left: 0;
     line-height: 30px;
     font-size: 20px;
@@ -582,7 +619,8 @@ html, body {
     all: unset;
     position: fixed;
     margin-top: unset;
-    top: 63%;
+    height: calc(var(--vh, 1vh) * 10);
+    top: calc(var(--vh, 1vh) * 187);
     right: 10%;
     background-color: rgb(255, 255, 255);
     /* padding: 10px; */
@@ -592,10 +630,17 @@ html, body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0);
     text-align: center;
+    z-index: 10;
   }
   
   form h2 {
-    margin-bottom: 20px;
+    text-align: center;
+    width: 105%;
+    margin-bottom: 15px;
+  }
+  form h2 {
+    text-align: center;
+    width: 105%;
   }
   
   input, textarea, button {

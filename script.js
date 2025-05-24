@@ -221,6 +221,40 @@ window.addEventListener("load", () => {
 });
 
 // _______________________________________________________________________________________________
+// ___________________________________________Timer_______________________________________________
+// _______________________________________________________________________________________________
+
+
+// Укажи дату окончания: 19 июля 2025, 15:00 (Ереван)
+const targetDate = new Date("2025-07-19T15:00:00+04:00");
+
+function updateCountdown() {
+  const now = new Date();
+  const diff = targetDate - now;
+
+  const countdownEl = document.getElementById("countdown");
+  if (!countdownEl) return;
+
+  if (diff <= 0) {
+    countdownEl.innerText = "Միջոցառումը սկսվեց!";
+    clearInterval(timer);
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  countdownEl.innerText = `${days} օր ${hours} ժ ${minutes} ր ${seconds} վ`;
+}
+
+updateCountdown();
+const timer = setInterval(updateCountdown, 1000);
+
+
+
+// _______________________________________________________________________________________________
 
 function showImageSizes() {
   let output = 'Размеры изображений:\n\n';
