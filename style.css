@@ -389,6 +389,7 @@ html, body {
       font-family: "Noto Serif Armenian", serif;
       font-weight: 300;
       z-index: 20;
+      will-change: transform;
     }
 
     .parallax-images img {
