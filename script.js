@@ -179,6 +179,10 @@ guestsNumber.addEventListener("input", () => {
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
+  const submitButton = form.querySelector("button[type='submit']");
+  submitButton.disabled = true;
+  submitButton.innerText = "Ուղարկվում է...";
+
   const formData = new FormData(form);
 
   fetch(GOOGLE_SCRIPT_URL, {
@@ -192,7 +196,7 @@ form.addEventListener("submit", function (e) {
         form.reset();
         extraFields.style.display = "none";
         guests.style.display = "none";
-        guests.required = false
+        guests.required = false;
       } else {
         console.warn("Սերվերի պատասխանը:", text);
         alert("Տեղի ունեցավ սխալ։ Խնդրում ենք փորձել ավելի ուշ։");
@@ -201,10 +205,13 @@ form.addEventListener("submit", function (e) {
     .catch((err) => {
       console.error("Fetch սխալ:", err);
       alert("Տեղի ունեցավ սխալ։ Խնդրում ենք փորձել ավելի ուշ։");
+    })
+    .finally(() => {
+      submitButton.disabled = false;
+      submitButton.innerText = "Ուղարկել";
     });
-  
-  
-  });
+});
+
 
   // Прокрутка к началу при обновлении страницы
   window.addEventListener("load", function () {
