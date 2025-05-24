@@ -464,7 +464,7 @@ html, body {
   }
   
   /* Основной текст */
-  .text-section h1 {
+  .text-section .h1 {
     all: unset;
     position: fixed;
     box-sizing: border-box;

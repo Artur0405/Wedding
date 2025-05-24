@@ -221,6 +221,50 @@ window.addEventListener("load", () => {
 });
 
 // _______________________________________________________________________________________________
+// ___________________________________________Text________________________________________________
+// _______________________________________________________________________________________________
+
+window.addEventListener("load", () => {
+  const text1 = document.querySelector(".h1");
+  const text2 = document.querySelector(".p1");
+  const text3 = document.querySelector(".p2");
+  const text4 = document.querySelector(".p3");
+  const text5 = document.querySelector(".p4");
+  const text6 = document.querySelector(".p5");
+  const text7 = document.querySelector(".p6");
+  const text8 = document.querySelector(".p7");
+  const text9 = document.querySelector(".p8");
+  const screenHeight = window.innerHeight;
+
+  if (window.innerWidth <= 768) {
+  
+  let fontSize = screenHeight * 0.025; // 3% от высоты
+
+  text1.style.fontSize = `${fontSize}px`;
+  text1.style.setProperty("font-size", `${fontSize}px`, "important");
+  text2.style.fontSize = `${fontSize}px`;
+  text2.style.setProperty("font-size", `${fontSize}px`, "important");
+  text3.style.fontSize = `${fontSize}px`;
+  text3.style.setProperty("font-size", `${fontSize}px`, "important");
+  text4.style.fontSize = `${fontSize}px`;
+  text4.style.setProperty("font-size", `${fontSize}px`, "important");
+  text5.style.fontSize = `${fontSize}px`;
+  text5.style.setProperty("font-size", `${fontSize}px`, "important");
+  text6.style.fontSize = `${fontSize}px`;
+  text6.style.setProperty("font-size", `${fontSize}px`, "important");
+  text7.style.fontSize = `${fontSize}px`;
+  text7.style.setProperty("font-size", `${fontSize}px`, "important");
+  text8.style.fontSize = `${fontSize}px`;
+  text8.style.setProperty("font-size", `${fontSize}px`, "important");
+  text9.style.fontSize = `${fontSize}px`;
+  text9.style.setProperty("font-size", `${fontSize}px`, "important");
+
+}
+});
+
+
+
+// _______________________________________________________________________________________________
 // ___________________________________________Timer_______________________________________________
 // _______________________________________________________________________________________________
 
