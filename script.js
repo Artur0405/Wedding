@@ -8,11 +8,12 @@ function setFixedVh() {
   console.log("1vh =", vh + "px");
 }
 
-function setFixedVh() {
-  const vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+function setFixedVw() {
+  const vw = window.innerWidth * 0.01;
+  document.documentElement.style.setProperty('--vw', `${vw}px`);
 }
 setFixedVh();
+setFixedVw();
 
 let screenHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vh')) * 100;
 let virtualPageHeight = screenHeight * 3.7; // или 4, 5 — сколько "прокрутки" нужно
@@ -55,6 +56,7 @@ let targetScroll = 0;
   const content = document.querySelector('.content-overlay');
   const contentForm = document.querySelector('.content-overlay form');
   const images = document.querySelectorAll('.parallax-images img');
+  const imagesText = document.querySelectorAll('.parallax-images p');
   const image = document.querySelector('.parallax-images');
 
 
@@ -74,6 +76,10 @@ function updateParallax() {
     images.forEach((img, index) => {
       const speed = index === 0 ? 1 : 1.06; // можно регулировать
       img.style.transform = `translate3d(0, ${-currentScroll * speed}px, 0)`;
+    });
+    imagesText.forEach((p, index) => {
+      const speed = 1; // можно регулировать
+      p.style.transform = `translate3d(0, ${-currentScroll * speed}px, 0)`;
     });
   } else {
 

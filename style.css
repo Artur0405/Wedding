@@ -378,7 +378,7 @@ html, body {
     }
 
     .content-overlay {
-      position: fixed;;
+      position: fixed;
       top: calc(var(--vh, 1vh) * 100);
       left: 0;
       z-index: 2;
@@ -423,15 +423,15 @@ html, body {
     }
   
     /* Привязка текста к конкретным изображениям */
-    .text1 { top: 30%;  left: 35%; position: absolute;}
-    .text2 { top: 33.2%;  left: 35%; letter-spacing: 7px;}
+    .text1 { top: calc(var(--vh, 1vh) * 45);  left: calc(var(--vw, 1vw) * 30); position: absolute;}
+    .text2 { top: calc(var(--vh, 1vh) * 53);  left: calc(var(--vw, 1vw) * 30); letter-spacing: 7px;}
   
 
   header {
     text-align: center;
     font-family: "Dzeragir", serif;
     all: unset;
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     display: block;
     width: 100%;
@@ -439,7 +439,7 @@ html, body {
     top: 0%;
     left: 0;
     font-size: 23px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(231, 88, 88, 0.564);
     font-weight: 400;
     border-radius: 0px;
   }
@@ -466,62 +466,62 @@ html, body {
   /* Основной текст */
   .text-section .h1 {
     all: unset;
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     display: block;
     text-align: center;
-    width: 100%;
+    width: calc(var(--vw, 1vw) * 100);
     padding-top: 4%;
     height: calc(var(--vh, 1vh) * 12);
     top: calc(var(--vh, 1vh) * 45);
     left: 0;
     font-size: 23px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(42, 254, 0, 0.693);
     font-weight: 400;
     border-radius: 0px;
   }
 
   .text-section .p1 {
     all: unset;
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     display: block;
     text-align: center;
-    width: 100%;
+    width: calc(var(--vw, 1vw) * 100);
     height: calc(var(--vh, 1vh) * 28);
     top: calc(var(--vh, 1vh) * 57);
     left: 0;
     font-size: 23px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(238, 225, 34, 0.559);
     font-weight: 400;
     border-radius: 0px;
   }
   .text-section .p2 {
     all: unset;
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     display: block;
     text-align: center;
-    width: 40%;
-    height: calc(var(--vh, 1vh) * 8);
+    width: calc(var(--vw, 1vw) * 40);
+    height: calc(var(--vh, 1vh) * 48);
     top: calc(var(--vh, 1vh) * 85);
-    right: 0;
+    left: calc(var(--vw, 1vw) * 60);
     font-size: 23px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(62, 161, 31, 0.463);
     font-weight: 400;
     border-radius: 0px;
   }
   .text-section .p3 {
     all: unset;
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     display: block;
     text-align: center;
-    width: 40%;
+    width: calc(var(--vw, 1vw) * 40);
     padding-top: 2%;
-    height: calc(var(--vh, 1vh) * 40);
+    height: calc(var(--vh, 1vh) * 0);
     top: calc(var(--vh, 1vh) * 93);
-    right: 0;
+    left: calc(var(--vw, 1vw) * 60);
     line-height: 30px;
     font-size: 20px;
     background-color: rgb(255, 255, 255);
@@ -530,11 +530,11 @@ html, body {
   }
   .text-section .p4 {
     all: unset;
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     display: block;
     text-align: center;
-    width: 100%;
+    width: calc(var(--vw, 1vw) * 100);
     padding-top: 2%;
     height: calc(var(--vh, 1vh) * 20);
     top: calc(var(--vh, 1vh) * 133);
@@ -547,13 +547,13 @@ html, body {
   }
   .text-section .p5 {
     all: unset;
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     display: block;
     text-align: center;
-    width: 40%;
+    width: calc(var(--vw, 1vw) * 40);
     padding-top: 2%;
-    height: calc(var(--vh, 1vh) * 8);
+    height: calc(var(--vh, 1vh) * 48);
     top: calc(var(--vh, 1vh) * 153);
     left: 0;
     line-height: 30px;
@@ -565,13 +565,13 @@ html, body {
 
   .text-section .p6 {
     all: unset;
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     display: block;
     text-align: center;
-    width: 40%;
+    width: calc(var(--vw, 1vw) * 40);
     padding-top: 2%;
-    height: calc(var(--vh, 1vh) * 40);
+    height: calc(var(--vh, 1vh) * 0);
     top: calc(var(--vh, 1vh) * 162);
     left: 0;
     line-height: 30px;
@@ -583,11 +583,11 @@ html, body {
 
   .text-section .p7 {
     all: unset;
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     display: block;
     text-align: center;
-    width: 100%;
+    width: calc(var(--vw, 1vw) * 100);
     padding-top: 2%;
     height: calc(var(--vh, 1vh) * 27);
     top: calc(var(--vh, 1vh) * 202);
@@ -600,11 +600,11 @@ html, body {
   }
   .text-section .p8 {
     all: unset;
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     display: block;
     text-align: center;
-    width: 100%;
+    width: calc(var(--vw, 1vw) * 100);
     padding-top: 2%;
     height: calc(var(--vh, 1vh) * 15);
     top: calc(var(--vh, 1vh) * 229);
@@ -617,7 +617,7 @@ html, body {
   }
   form {
     all: unset;
-    position: fixed;
+    position: absolute;
     margin-top: unset;
     height: calc(var(--vh, 1vh) * 10);
     top: calc(var(--vh, 1vh) * 244);
