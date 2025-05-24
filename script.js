@@ -15,12 +15,12 @@ function setFixedVh() {
 setFixedVh();
 
 let screenHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vh')) * 100;
-let virtualPageHeight = screenHeight * 3.5; // или 4, 5 — сколько "прокрутки" нужно
+let virtualPageHeight = screenHeight * 3.7; // или 4, 5 — сколько "прокрутки" нужно
 
 if (window.innerWidth <= 768) {
-  document.getElementById("scroll-wrapper").style.height = virtualPageHeight + "px";
+  document.getElementById("scroll-wrapper").style.height = virtualPageHeight * 1.15 + "px";
 } else {
-  document.getElementById("scroll-wrapper").style.height = virtualPageHeight * ((42474.6504/window.innerHeight) ** (1/5)) + "px";
+  document.getElementById("scroll-wrapper").style.height = virtualPageHeight * ((33280/window.innerHeight) ** (1/5)) + "px";
 }
 
 // При загрузке страницы
