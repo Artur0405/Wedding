@@ -74,11 +74,11 @@ function updateParallax() {
 
     console.log("Mobile script запущен");
     images.forEach((img, index) => {
-      const speed = index === 0 ? 1 : 1.06; // можно регулировать
+      const speed = index === 0 ? 0 : 0.06; // можно регулировать
       img.style.transform = `translate3d(0, ${-currentScroll * speed}px, 0)`;
     });
     imagesText.forEach((p, index) => {
-      const speed = 1; // можно регулировать
+      const speed = 0; // можно регулировать
       p.style.transform = `translate3d(0, ${-currentScroll * speed}px, 0)`;
     });
   } else {
@@ -90,9 +90,9 @@ function updateParallax() {
   }
 
   if (window.innerWidth <= 768) {
-    if (content) {
-      content.style.transform = `translate3d(0, ${-currentScroll * 1}px, 0)`;
-    }
+    // if (content) {
+    //   content.style.transform = `translate3d(0, ${-currentScroll * 1}px, 0)`;
+    // }
   } else {
     // currentScroll * x * scrollRatio = 1700
     // x = 1700 / (currentScroll * scrollRatio)
