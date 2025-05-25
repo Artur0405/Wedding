@@ -429,7 +429,7 @@ html, body {
     .img-text {
       position: absolute;
       color: white;
-      font-size: 80px;
+      font-size: 40px;
       font-family: "Noto Serif Armenian", serif;
       font-family: 'Dzeragir', sans-serif;
       /* font-family: "Roboto Serif", serif; */
@@ -441,8 +441,8 @@ html, body {
     }
   
     /* Привязка текста к конкретным изображениям */
-    .text1 { top: calc(var(--vh, 1vh) * 45);  left: calc(var(--vw, 1vw) * 30); position: absolute;}
-    .text2 { top: calc(var(--vh, 1vh) * 53);  left: calc(var(--vw, 1vw) * 30); letter-spacing: 7px;}
+    .text1 { top: calc(var(--vh, 1vh) * 55);  left: calc(var(--vw, 1vw) * 38); letter-spacing: 3px;}
+    .text2 { top: calc(var(--vh, 1vh) * 60);  left: calc(var(--vw, 1vw) * 38); letter-spacing: 7px; }
   
 
   #countdown {

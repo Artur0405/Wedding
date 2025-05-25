@@ -170,8 +170,8 @@ function updateExtraGuestsVisibility() {
 
 
 guestsNumber.addEventListener("input", () => {
-  if (guestsNumber.value < 1) {
-    guestsNumber.value = 1;
+  if (guestsNumber.value < 0) {
+    guestsNumber.value = 0;
   }
   updateExtraGuestsVisibility();
 });
@@ -237,6 +237,8 @@ window.addEventListener("load", () => {
 // _______________________________________________________________________________________________
 
 window.addEventListener("load", () => {
+  const ImgText1 = document.querySelector(".img-text.text1");
+  const ImgText2 = document.querySelector(".img-text.text2");
   const Header1 = document.querySelector(".head-1");
   const Header2 = document.querySelector(".head-2");
   const text1 = document.querySelector(".h1");
@@ -254,7 +256,12 @@ window.addEventListener("load", () => {
   
   let fontSize = screenHeight * 0.025; // 3% от высоты
   let HeaderfontSize = screenHeight * 0.06; // 3% от высоты
+  let ImgTextfontSize = screenHeight * 0.04; // 3% от высоты
 
+  ImgText1.style.fontSize = `${ImgTextfontSize}px`;
+  ImgText1.style.setProperty("font-size", `${ImgTextfontSize}px`, "important");
+  ImgText2.style.fontSize = `${ImgTextfontSize}px`;
+  ImgText2.style.setProperty("font-size", `${ImgTextfontSize}px`, "important");
   Header1.style.fontSize = `${HeaderfontSize}px`;
   Header1.style.setProperty("font-size", `${HeaderfontSize}px`, "important");
   Header2.style.fontSize = `${HeaderfontSize}px`;
