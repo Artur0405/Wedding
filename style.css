@@ -405,6 +405,7 @@ html, body {
       font-weight: 300;
       z-index: 200;
       overflow-y: scroll;
+      overflow-x: hidden;
       background-color: rgba(0,0,0,0);
     }
 
@@ -453,13 +454,13 @@ html, body {
     display: flex;
     justify-content: center;
     gap: 70px;
-  
     background-color: #f9f9f9;
     border: 2px solid #ddd;
     border-radius: 12px;
-    padding: 15px 20px;
-    max-width: 400px;
-    margin: 8% auto;
+    /* padding: 15px 20px; */
+    width: calc(var(--vh, 1vh) * 50);
+    max-width: calc(var(--vh, 1vh) * 50);
+    margin: 6% auto;
   
     /* box-shadow: 0 4px 12px rgba(255, 0, 0, 0.499); */
     transition: all 0.3s ease;
@@ -535,6 +536,7 @@ html, body {
     background-color: rgba(255, 255, 255, 1);
     font-weight: 400;
     border-radius: 0px;
+    padding-top: calc(var(--vh, 1vh) * 4);
   }
 
   .text-section .p1 {
@@ -551,7 +553,7 @@ html, body {
     background-color: rgba(202, 0, 0, 0.589);
     font-weight: 400;
     border-radius: 0px;
-    padding: 30px;
+    padding: calc(var(--vh, 1vh) * 4);
   }
   .text-section .p2 {
     all: unset;
@@ -567,7 +569,7 @@ html, body {
     background-color: rgba(24, 87, 176, 0.406);
     font-weight: 400;
     border-radius: 0px;
-    padding-top: 30px;
+    padding-top: calc(var(--vh, 1vh) * 4);
   }
 
   .text-section .p3 {
@@ -584,24 +586,9 @@ html, body {
     background-color: rgba(49, 174, 68, 0.641);
     font-weight: 400;
     border-radius: 0px;
+    padding-top: calc(var(--vh, 1vh) * 5);
   }
-  /* .text-section .p4 {
-    all: unset;
-    position: absolute;
-    box-sizing: border-box;
-    display: block;
-    text-align: center;
-    width: calc(var(--vw, 1vw) * 40);
-    padding-top: 2%;
-    height: calc(var(--vh, 1vh) * 0);
-    top: calc(var(--vh, 1vh) * 173);
-    left: calc(var(--vw, 1vw) * 60);
-    line-height: 30px;
-    font-size: 20px;
-        background-color: rgba(255, 255, 255, 1);
-    font-weight: 400;
-    border-radius: 0px;
-  } */
+
   .text-section .p4 {
     all: unset;
     position: absolute;
@@ -609,7 +596,6 @@ html, body {
     display: block;
     text-align: center;
     width: calc(var(--vw, 1vw) * 100);
-    padding-top: 2%;
     height: calc(var(--vh, 1vh) * 20);
     top: calc(var(--vh, 1vh) * 211);
     left: 0;
@@ -635,25 +621,8 @@ html, body {
     background-color: rgba(68, 144, 125, 0.534);
     font-weight: 400;
     border-radius: 0px;
+    padding-top: calc(var(--vh, 1vh) * 5);
   }
-
-  /* .text-section .p6 {
-    all: unset;
-    position: absolute;
-    box-sizing: border-box;
-    display: block;
-    text-align: center;
-    width: calc(var(--vw, 1vw) * 40);
-    padding-top: 2%;
-    height: calc(var(--vh, 1vh) * 0);
-    top: calc(var(--vh, 1vh) * 242);
-    left: 0;
-    line-height: 30px;
-    font-size: 20px;
-    background-color: rgb(255, 255, 255);
-    font-weight: 400;
-    border-radius: 0px;
-  } */
 
   .text-section .p6 {
     all: unset;
