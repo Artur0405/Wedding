@@ -640,7 +640,7 @@ html, body {
     background-color: rgba(185, 107, 125, 0.279);
     font-weight: 400;
     border-radius: 0px;
-    padding-top: 50px;
+    padding-top: calc(var(--vh, 1vh) * 5);
   }
   .text-section .p7 {
     all: unset;
@@ -658,7 +658,7 @@ html, body {
     background-color: rgba(83, 121, 135, 0.472);
     font-weight: 400;
     border-radius: 0px;
-    padding-top: 50px;
+    padding-top: calc(var(--vh, 1vh) * 5);
   }
 
   form {
