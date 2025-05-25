@@ -237,6 +237,8 @@ window.addEventListener("load", () => {
 // _______________________________________________________________________________________________
 
 window.addEventListener("load", () => {
+  const Header1 = document.querySelector(".head-1");
+  const Header2 = document.querySelector(".head-2");
   const text1 = document.querySelector(".h1");
   const text2 = document.querySelector(".p1");
   const text3 = document.querySelector(".p2");
@@ -251,7 +253,12 @@ window.addEventListener("load", () => {
   if (window.innerWidth <= 768) {
   
   let fontSize = screenHeight * 0.025; // 3% от высоты
+  let HeaderfontSize = screenHeight * 0.06; // 3% от высоты
 
+  Header1.style.fontSize = `${HeaderfontSize}px`;
+  Header1.style.setProperty("font-size", `${HeaderfontSize}px`, "important");
+  Header2.style.fontSize = `${HeaderfontSize}px`;
+  Header2.style.setProperty("font-size", `${HeaderfontSize}px`, "important");
   text1.style.fontSize = `${fontSize}px`;
   text1.style.setProperty("font-size", `${fontSize}px`, "important");
   text2.style.fontSize = `${fontSize}px`;

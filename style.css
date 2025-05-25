@@ -460,7 +460,7 @@ html, body {
     /* padding: 15px 20px; */
     width: calc(var(--vh, 1vh) * 50);
     max-width: calc(var(--vh, 1vh) * 50);
-    margin: 6% auto;
+    margin: calc(var(--vh, 1vh) * 4) auto;
   
     /* box-shadow: 0 4px 12px rgba(255, 0, 0, 0.499); */
     transition: all 0.3s ease;
@@ -519,6 +519,15 @@ html, body {
     all: unset;
     position: absolute;
   }
+
+  a {
+    text-decoration: none;
+    color: rgb(145, 124, 0); /* или любой другой цвет */
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
   
   /* Основной текст */
   .text-section .h1 {
@@ -536,7 +545,7 @@ html, body {
     background-color: rgba(255, 255, 255, 1);
     font-weight: 400;
     border-radius: 0px;
-    padding-top: calc(var(--vh, 1vh) * 4);
+    padding-top: calc(var(--vh, 1vh) * 6);
   }
 
   .text-section .p1 {
@@ -550,7 +559,7 @@ html, body {
     top: calc(var(--vh, 1vh) * 132);
     left: 0;
     font-size: 23px;
-    background-color: rgba(202, 0, 0, 0.589);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
     padding: calc(var(--vh, 1vh) * 4);
@@ -566,7 +575,7 @@ html, body {
     top: calc(var(--vh, 1vh) * 153);
     left: calc(var(--vw, 1vw) * 0);
     font-size: 23px;
-    background-color: rgba(24, 87, 176, 0.406);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
     padding-top: calc(var(--vh, 1vh) * 4);
@@ -583,7 +592,7 @@ html, body {
     top: calc(var(--vh, 1vh) * 163);
     left: calc(var(--vw, 1vw) * 60);
     font-size: 23px;
-    background-color: rgba(49, 174, 68, 0.641);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
     padding-top: calc(var(--vh, 1vh) * 5);
@@ -601,7 +610,7 @@ html, body {
     left: 0;
     line-height: 30px;
     font-size: 23px;
-    background-color: rgba(107, 25, 96, 0.398);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
   }
@@ -618,7 +627,7 @@ html, body {
     left: 0;
     line-height: 30px;
     font-size: 20px;
-    background-color: rgba(68, 144, 125, 0.534);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
     padding-top: calc(var(--vh, 1vh) * 5);
@@ -637,7 +646,7 @@ html, body {
     left: 0;
     line-height: 30px;
     font-size: 20px;
-    background-color: rgba(185, 107, 125, 0.279);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
     padding-top: calc(var(--vh, 1vh) * 5);
@@ -655,7 +664,7 @@ html, body {
     left: 0;
     line-height: 30px;
     font-size: 20px;
-    background-color: rgba(83, 121, 135, 0.472);
+    background-color: rgb(255, 255, 255);
     font-weight: 400;
     border-radius: 0px;
     padding-top: calc(var(--vh, 1vh) * 5);
