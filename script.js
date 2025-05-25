@@ -135,12 +135,12 @@ attendanceSelect.addEventListener("change", function () {
     document.querySelector('input[name="guests"]').value = "1";
     if (guestsNumber.value === "1") {
       extraFields.style.display = "block";
-      // guests.style.display = "none"
-      // guests.required = false
+      guests.style.display = "none"
+      guests.required = false
     } else {
       extraFields.style.display = "block";
-      // guests.style.display = "block"
-      // guests.required = true
+      guests.style.display = "block"
+      guests.required = true
     }
   } else {
     extraFields.style.display = "none";

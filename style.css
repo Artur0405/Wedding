@@ -453,7 +453,7 @@ html, body {
     color: #333;
     display: flex;
     justify-content: center;
-    gap: 70px;
+    gap: calc(var(--vw, 1vw) * 12);
     background-color: #f9f9f9;
     border: 2px solid #ddd;
     border-radius: 12px;
@@ -491,7 +491,7 @@ html, body {
     position: absolute;
     box-sizing: border-box;
     display: block;
-    width: 100%;
+    width: calc(var(--vw, 1vw) * 100);
     height: calc(var(--vh, 1vh) * 40);
     top: calc(var(--vh, 1vh) * 80);
     left: 0;
