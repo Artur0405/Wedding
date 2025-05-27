@@ -239,6 +239,7 @@ window.addEventListener("load", () => {
 window.addEventListener("load", () => {
   const ImgText1 = document.querySelector(".img-text.text1");
   const ImgText2 = document.querySelector(".img-text.text2");
+  const ImgText3 = document.querySelector(".img-text.text3");
   const Header1 = document.querySelector(".head-1");
   const Header2 = document.querySelector(".head-2");
   const text1 = document.querySelector(".h1");
@@ -249,21 +250,24 @@ window.addEventListener("load", () => {
   const text6 = document.querySelector(".p5");
   const text7 = document.querySelector(".p6");
   const text8 = document.querySelector(".p7");
-  const text9 = document.querySelector(".p8");
+  const text9 = document.querySelector(".form");
+  const form_foot = document.querySelector(".form_foot");
   const screenHeight = window.innerHeight;
 
   if (window.innerWidth <= 768) {
   
   let fontSize = screenHeight * 0.025; // 3% от высоты
   let HeaderfontSize = screenHeight * 0.06; // 3% от высоты
-  let ImgTextfontSize = screenHeight * 0.04; // 3% от высоты
+  let ImgTextfontSize = screenHeight * 0.05; // 3% от высоты
 
   ImgText1.style.fontSize = `${ImgTextfontSize}px`;
   ImgText1.style.setProperty("font-size", `${ImgTextfontSize}px`, "important");
   ImgText2.style.fontSize = `${ImgTextfontSize}px`;
   ImgText2.style.setProperty("font-size", `${ImgTextfontSize}px`, "important");
-  Header1.style.fontSize = `${HeaderfontSize}px`;
-  Header1.style.setProperty("font-size", `${HeaderfontSize}px`, "important");
+  ImgText3.style.fontSize = `${ImgTextfontSize * 1.5}px`;
+  ImgText3.style.setProperty("font-size", `${ImgTextfontSize * 1.5}px`, "important");
+  Header1.style.fontSize = `${HeaderfontSize * 1.5}px`;
+  Header1.style.setProperty("font-size", `${HeaderfontSize * 1.5}px`, "important");
   Header2.style.fontSize = `${HeaderfontSize}px`;
   Header2.style.setProperty("font-size", `${HeaderfontSize}px`, "important");
   text1.style.fontSize = `${fontSize}px`;
@@ -284,7 +288,8 @@ window.addEventListener("load", () => {
   text8.style.setProperty("font-size", `${fontSize}px`, "important");
   text9.style.fontSize = `${fontSize}px`;
   text9.style.setProperty("font-size", `${fontSize}px`, "important");
-
+  form_foot.style.fontSize = `${fontSize * 1.3}px`;
+  form_foot.style.setProperty("font-size", `${fontSize * 1.3}px`, "important");
 }
 });
 
