@@ -358,6 +358,20 @@ html, body {
 
   @media (max-width: 768px) {
 
+
+    html {
+      margin: 0;
+      overflow-x: hidden;
+      scrollbar-width: none;         /* Firefox */
+      -ms-overflow-style: none;      /* IE и Edge */
+    }
+  
+    html {
+      overscroll-behavior-y: none;
+      width:calc(var(--vw, 1vw) * 100);
+    }
+
+    
     body {
       height: unset;
       overflow-y: hidden;
@@ -365,11 +379,12 @@ html, body {
       padding: 0%;
       margin: 0;
       background-color: rgba(0,0,0,0);
+      width:calc(var(--vw, 1vw) * 100);
     }
 
     #scroll-wrapper {
       position: absolute;
-      width: 100%;
+      width:calc(var(--vw, 1vw) * 100);
       padding: 0%;
       background-color: rgba(0,0,0,0);
       /* overflow-y: scroll; */
@@ -378,9 +393,8 @@ html, body {
       position: relative;
       top: 0%;
       left: 0%;
-      width: 100%;
+      width:calc(var(--vw, 1vw) * 100);
       overflow-y: scroll; 
-      /* height: calc(var(--vh, 1vh) * 1000); */
       background-color: rgba(0,0,0,0);
     }
 
@@ -401,17 +415,16 @@ html, body {
       position: relative;
       top: calc(var(--vh, 1vh) * 0);
       width: calc(var(--vw, 1vw) * 100);
-      left: calc(var(--vw, 1vw) * 0);;
+      left: calc(var(--vw, 1vw) * 0);
       z-index: 2;
       padding-left: 0%;
-      width: 100%;
       height: calc(var(--vh, 1vh) * 400);
       font-family: "Noto Serif Armenian", serif;
       font-weight: 300;
       z-index: 200;
       overflow-y: scroll;
       overflow-x: hidden;
-      background-color: rgba(135, 50, 50, 0);
+      background-color: rgba(170, 90, 90, 0);
     }
 
     .parallax-images img {
@@ -447,8 +460,8 @@ html, body {
       border-radius: 0px; 
       height: calc(var(--vh, 1vh) * 65);
 
-      -webkit-mask-image: linear-gradient(to right, rgb(255, 255, 255) 40%, rgba(0, 0, 0, 0.01) 100%);
-      mask-image: linear-gradient(to right, rgb(255, 255, 255) 40%, rgba(0, 0, 0, 0.01) 100%);
+      -webkit-mask-image: linear-gradient(to right, rgb(255, 255, 255) 60%, rgba(0, 0, 0, 0) 100%);
+      mask-image: linear-gradient(to right, rgb(255, 255, 255) 60%, rgba(0, 0, 0, 0) 100%);
   
       -webkit-mask-size: 100% 90%;
       mask-size: 100% 90%;
@@ -465,8 +478,8 @@ html, body {
       border-radius: 0px; 
       height: calc(var(--vh, 1vh) * 63);
     
-      -webkit-mask-image: linear-gradient(to left, rgb(255, 255, 255) 40%, rgba(0, 0, 0, 0.01) 100%);
-      mask-image: linear-gradient(to left, rgb(255, 255, 255) 40%, rgba(0, 0, 0, 0.01) 100%);
+      -webkit-mask-image: linear-gradient(to left, rgb(255, 255, 255) 65%, rgba(0, 0, 0, 0) 100%);
+      mask-image: linear-gradient(to left, rgb(255, 255, 255) 65%, rgba(0, 0, 0, 0) 100%);
   
       -webkit-mask-size: 100% 90%;
       mask-size: 100% 90%;
@@ -550,8 +563,7 @@ html, body {
     position: absolute;
     box-sizing: border-box;
     display: block;
-    /* width: calc(var(--vw, 1vw) * 100);
-    height: calc(var(--vh, 1vh) * 40); */
+    width: calc(var(--vw, 1vw) * 100);
     top: unset;
     left: 0;
     background-color: rgba(255, 255, 255, 0);
@@ -565,7 +577,7 @@ html, body {
     top: unset;
     padding-top: calc(var(--vh, 1vh) * 3);    
     margin: 0;
-    color: rgb(56, 129, 88);
+    color: rgb(242, 243, 244);
     top: calc(var(--vh, 1vh) * 0);
     width: calc(var(--vw, 1vw) * 100);
     height: calc(var(--vh, 1vh) * 10);
@@ -590,8 +602,10 @@ html, body {
   }
 
   .text-section  {
-    all: unset;
+    /* all: unset; */
     position: absolute;
+    width: calc(var(--vw, 1vw) * 100);
+    font-family: "Mshatakan", serif;
   }
 
   a {
@@ -601,10 +615,6 @@ html, body {
   
   a:hover {
     text-decoration: underline;
-  }
-
-  .text-section {
-    font-family: "Mshatakan", serif;
   }
   
   /* Основной текст */
@@ -635,7 +645,7 @@ html, body {
     width: calc(var(--vw, 1vw) * 100);
     height: calc(var(--vh, 1vh) * 21);
     top: calc(var(--vh, 1vh) * 132);
-    left: 0;
+    left: calc(var(--vw, 1vw) * 0);
     font-size: 23px;
     background-color: rgb(255, 255, 255);
     font-weight: 400;
@@ -685,7 +695,7 @@ html, body {
     width: calc(var(--vw, 1vw) * 100);
     height: calc(var(--vh, 1vh) * 20);
     top: calc(var(--vh, 1vh) * 211);
-    left: 0;
+    left: calc(var(--vw, 1vw) * 0);
     line-height: 30px;
     font-size: 23px;
     background-color: rgb(255, 255, 255);
@@ -702,7 +712,7 @@ html, body {
     padding-top: 2%;
     height: calc(var(--vh, 1vh) * 48);
     top: calc(var(--vh, 1vh) * 231);
-    left: 0;
+    left: calc(var(--vw, 1vw) * 0);
     line-height: 30px;
     font-size: 20px;
     background-color: rgb(255, 255, 255);
@@ -721,7 +731,7 @@ html, body {
     padding-top: 2%;
     height: calc(var(--vh, 1vh) * 15);
     top: calc(var(--vh, 1vh) * 279);
-    left: 0;
+    left: calc(var(--vw, 1vw) * 0);
     line-height: 30px;
     font-size: 20px;
     background-color: rgb(255, 255, 255);
@@ -739,7 +749,7 @@ html, body {
     padding-top: 2%;
     height: calc(var(--vh, 1vh) * 15);
     top: calc(var(--vh, 1vh) * 294);
-    left: 0;
+    left: calc(var(--vw, 1vw) * 0);
     line-height: 30px;
     font-size: 20px;
     background-color: rgb(255, 255, 255);
