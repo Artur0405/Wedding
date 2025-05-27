@@ -413,7 +413,7 @@ html, body {
       width: calc(var(--vw, 1vw) * 100);
       height: calc(var(--vh, 1vh) * 400);
       z-index: 0;
-      overflow-y: scroll;
+      overflow-y: auto;
       background-color: rgba(0,0,0,0);
       /* will-change: auto; */
       /* transform: translateZ(0); */
@@ -431,7 +431,7 @@ html, body {
       font-family: "Noto Serif Armenian", serif;
       font-weight: 300;
       z-index: 200;
-      overflow-y: scroll;
+      overflow-y: auto;
       overflow-x: hidden;
       background-color: rgba(135, 50, 50, 0);
     }
