@@ -368,6 +368,15 @@ html, body {
     }
 
     #scroll-wrapper {
+      scrollbar-width: none;         /* Firefox */
+      -ms-overflow-style: none;      /* IE и Edge */
+    }
+  
+    #scroll-wrapper {
+      overscroll-behavior-y: none;
+    }
+
+    #scroll-wrapper {
       position: absolute;
       width: 100%;
       padding: 0%;
