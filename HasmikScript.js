@@ -327,6 +327,22 @@ function updateCountdown() {
   <div class="time-block"><div class="number">${minutes}</div><div class="label">Րոպե</div></div>
   <div class="time-block"><div class="number">${seconds}</div><div class="label">Վայրկյան</div></div>
 `;
+
+const countdownNumbers = document.querySelectorAll(".time-block .number");
+const countdownLabels = document.querySelectorAll(".time-block .label");
+
+const countdownNumberSize = screenHeight * 0.035;
+const countdownLabelSize = screenHeight * 0.018;
+
+countdownNumbers.forEach((el) => {
+  el.style.fontSize = `${countdownNumberSize}px`;
+  el.style.setProperty("font-size", `${countdownNumberSize}px`, "important");
+});
+
+countdownLabels.forEach((el) => {
+  el.style.fontSize = `${countdownLabelSize}px`;
+  el.style.setProperty("font-size", `${countdownLabelSize}px`, "important");
+});
 }
 
 updateCountdown();
