@@ -367,12 +367,12 @@ html, body {
       background-color: rgba(0,0,0,0);
     }
 
-    #scroll-wrapper {
+    .parallax-container {
       scrollbar-width: none;         /* Firefox */
       -ms-overflow-style: none;      /* IE и Edge */
     }
   
-    #scroll-wrapper {
+    .parallax-container {
       overscroll-behavior-y: none;
     }
 
