@@ -368,17 +368,19 @@ html, body {
     }
 
     #scroll-wrapper::-webkit-scrollbar,
-.parallax-container::-webkit-scrollbar,
-.parallax-images::-webkit-scrollbar {
-  display: none;
-}
+    .parallax-container::-webkit-scrollbar,
+    .parallax-images::-webkit-scrollbar,
+    .content-overlay::-webkit-scrollbar {
+      display: none;
+    }
 
-#scroll-wrapper,
-.parallax-container,
-.parallax-images {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+    #scroll-wrapper,
+    .parallax-container,
+    .parallax-images,
+    .content-overlay {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    } 
 
     body {
       scrollbar-width: none;         /* Firefox */
