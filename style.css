@@ -472,7 +472,7 @@ html, body {
       transition: opacity 0.3s ease;
     }
     .img5  { 
-      top: calc(var(--vh, 1vh) * 235);  
+      top: calc(var(--vh, 1vh) * 240);  
       left: 40%;  
       width: 59%; 
       border-radius: 0px; 
@@ -582,8 +582,8 @@ html, body {
     width: calc(var(--vw, 1vw) * 100);
     height: calc(var(--vh, 1vh) * 10);
     background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
     font-size: 900px;
-    /* margin-bottom: 0; */
     font-family: "Dzeragir", serif;
     font-weight: 500;
   }
@@ -591,14 +591,17 @@ html, body {
   header p {
     text-align: center;
     position: absolute;
-    padding-top: calc(var(--vh, 1vh) * 6);
+    box-sizing: border-box;
+    display: block;
     margin: 0;
+    left: calc(var(--vw, 1vw) * 0);;
     top: calc(var(--vh, 1vh) * 90);
     width: calc(var(--vw, 1vw) * 100);
     height: calc(var(--vh, 1vh) * 30);
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 255, 0.539);
     font-size: 50px;
     font-family: "Dzeragir", serif;
+    padding-top: calc(var(--vh, 1vh) * 6);
   }
 
   .text-section  {
@@ -625,15 +628,14 @@ html, body {
     display: block;
     text-align: center;
     width: calc(var(--vw, 1vw) * 100);
-    padding-top: 4%;
-    height: calc(var(--vh, 1vh) * 12);
     top: calc(var(--vh, 1vh) * 120);
+    height: calc(var(--vh, 1vh) * 12);
     left: 0;
     font-size: 23px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(62, 72, 156, 0.437);
     font-weight: 400;
     border-radius: 0px;
-    padding-top: calc(var(--vh, 1vh) * 6);
+    padding-top: calc(var(--vh, 1vh) * 5);
   }
 
   .text-section .p1 {
@@ -647,7 +649,7 @@ html, body {
     top: calc(var(--vh, 1vh) * 132);
     left: calc(var(--vw, 1vw) * 0);
     font-size: 23px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(107, 135, 41, 0.518);
     font-weight: 400;
     border-radius: 0px;
     padding: calc(var(--vh, 1vh) * 4);
@@ -663,7 +665,7 @@ html, body {
     top: calc(var(--vh, 1vh) * 153);
     left: calc(var(--vw, 1vw) * 0);
     font-size: 23px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(88, 187, 158, 0.636);
     font-weight: 400;
     border-radius: 0px;
     padding-top: calc(var(--vh, 1vh) * 4);
@@ -680,7 +682,7 @@ html, body {
     top: calc(var(--vh, 1vh) * 163);
     left: calc(var(--vw, 1vw) * 60);
     font-size: 23px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(125, 85, 162, 0.501);
     font-weight: 400;
     border-radius: 0px;
     padding-top: calc(var(--vh, 1vh) * 5);
@@ -698,7 +700,7 @@ html, body {
     left: calc(var(--vw, 1vw) * 0);
     line-height: 30px;
     font-size: 23px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(252, 0, 92, 0.561);
     font-weight: 400;
     border-radius: 0px;
   }
@@ -715,7 +717,7 @@ html, body {
     left: calc(var(--vw, 1vw) * 0);
     line-height: 30px;
     font-size: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(102, 197, 64, 0.453);
     font-weight: 400;
     border-radius: 0px;
     padding-top: calc(var(--vh, 1vh) * 5);
@@ -734,7 +736,7 @@ html, body {
     left: calc(var(--vw, 1vw) * 0);
     line-height: 30px;
     font-size: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(71, 162, 79, 0.592);
     font-weight: 400;
     border-radius: 0px;
     padding-top: calc(var(--vh, 1vh) * 5);
@@ -752,7 +754,7 @@ html, body {
     left: calc(var(--vw, 1vw) * 0);
     line-height: 30px;
     font-size: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(36, 0, 155, 0.621);
     font-weight: 400;
     border-radius: 0px;
     padding-top: calc(var(--vh, 1vh) * 5);
