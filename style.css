@@ -768,6 +768,7 @@ html, body {
     position: absolute;
     margin-top: unset;
     font-family:unset;
+    left: calc(var(--vw, 1vw) * 0);
     height: calc(var(--vh, 1vh) * 10);
     top: calc(var(--vh, 1vh) * 323);
     background-color: rgb(255, 255, 255);
