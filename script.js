@@ -276,12 +276,12 @@ window.addEventListener("load", () => {
   text2.style.setProperty("font-size", `${fontSize}px`, "important");
   text3.style.fontSize = `${fontSize}px`;
   text3.style.setProperty("font-size", `${fontSize}px`, "important");
-  text4.style.fontSize = `${fontSize}px`;
-  text4.style.setProperty("font-size", `${fontSize}px`, "important");
+  text4.style.fontSize = `${fontSize * 0.86}px`;
+  text4.style.setProperty("font-size", `${fontSize * 0.86}px`, "important");
   text5.style.fontSize = `${fontSize}px`;
   text5.style.setProperty("font-size", `${fontSize}px`, "important");
-  text6.style.fontSize = `${fontSize}px`;
-  text6.style.setProperty("font-size", `${fontSize}px`, "important");
+  text6.style.fontSize = `${fontSize * 0.86}px`;
+  text6.style.setProperty("font-size", `${fontSize * 0.86}px`, "important");
   text7.style.fontSize = `${fontSize}px`;
   text7.style.setProperty("font-size", `${fontSize}px`, "important");
   text8.style.fontSize = `${fontSize}px`;
