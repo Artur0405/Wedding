@@ -454,7 +454,7 @@ html, body {
       transition: opacity 0.3s ease;
     }
     .img4  { 
-      top: calc(var(--vh, 1vh) * 162);  
+      top: calc(var(--vh, 1vh) * 165);  
       left: 1%; 
       width: 59%; 
       border-radius: 0px; 
@@ -472,7 +472,7 @@ html, body {
       transition: opacity 0.3s ease;
     }
     .img5  { 
-      top: calc(var(--vh, 1vh) * 234);  
+      top: calc(var(--vh, 1vh) * 237);  
       left: 40%;  
       width: 59%; 
       border-radius: 0px; 
@@ -645,14 +645,14 @@ html, body {
     display: block;
     text-align: center;
     width: calc(var(--vw, 1vw) * 100);
-    height: calc(var(--vh, 1vh) * 21);
+    height: calc(var(--vh, 1vh) * 24);
     top: calc(var(--vh, 1vh) * 129);
     left: calc(var(--vw, 1vw) * 0);
     font-size: 23px;
     background-color: rgba(107, 135, 41, 0.518);
     font-weight: 400;
     border-radius: 0px;
-    padding: calc(var(--vh, 1vh) * 4);
+    padding: calc(var(--vh, 1vh) * 4.5);
   }
   .text-section .p2 {
     all: unset;
@@ -662,30 +662,31 @@ html, body {
     text-align: center;
     width: calc(var(--vw, 1vw) * 100);
     height: calc(var(--vh, 1vh) * 10);
-    top: calc(var(--vh, 1vh) * 150);
+    top: calc(var(--vh, 1vh) * 153);
     left: calc(var(--vw, 1vw) * 0);
     font-size: 23px;
     background-color: rgba(88, 187, 158, 0.636);
     font-weight: 400;
     border-radius: 0px;
-    padding-top: calc(var(--vh, 1vh) * 4);
+    padding-top: calc(var(--vh, 1vh) * 3.5);
   }
 
   .text-section .p3 {
     all: unset;
+    padding-inline: calc(var(--vw, 1vw) * 1);
     position: absolute;
     box-sizing: border-box;
     display: block;
     text-align: center;
     width: calc(var(--vw, 1vw) * 40);
     height: calc(var(--vh, 1vh) * 48);
-    top: calc(var(--vh, 1vh) * 160);
+    top: calc(var(--vh, 1vh) * 163);
     left: calc(var(--vw, 1vw) * 60);
     font-size: 23px;
     background-color: rgba(125, 85, 162, 0.501);
     font-weight: 400;
     border-radius: 0px;
-    padding-top: calc(var(--vh, 1vh) * 5);
+    padding-top: calc(var(--vh, 1vh) * 4);
   }
 
   .text-section .p4 {
@@ -696,7 +697,7 @@ html, body {
     text-align: center;
     width: calc(var(--vw, 1vw) * 100);
     height: calc(var(--vh, 1vh) * 20);
-    top: calc(var(--vh, 1vh) * 208);
+    top: calc(var(--vh, 1vh) * 211);
     left: calc(var(--vw, 1vw) * 0);
     line-height: 30px;
     font-size: 23px;
@@ -710,17 +711,18 @@ html, body {
     box-sizing: border-box;
     display: block;
     text-align: center;
+    padding-inline: calc(var(--vw, 1vw) * 1);
     width: calc(var(--vw, 1vw) * 40);
     padding-top: 2%;
     height: calc(var(--vh, 1vh) * 48);
-    top: calc(var(--vh, 1vh) * 228);
+    top: calc(var(--vh, 1vh) * 231);
     left: calc(var(--vw, 1vw) * 0);
     line-height: 30px;
     font-size: 20px;
-    background-color: rgba(102, 197, 64, 0.453);
+    background-color: rgba(0, 0, 0, 0.453);
     font-weight: 400;
     border-radius: 0px;
-    padding-top: calc(var(--vh, 1vh) * 5);
+    padding-top: calc(var(--vh, 1vh) * 4);
   }
 
   .text-section .p6 {
@@ -732,7 +734,7 @@ html, body {
     width: calc(var(--vw, 1vw) * 100);
     padding-top: 2%;
     height: calc(var(--vh, 1vh) * 15);
-    top: calc(var(--vh, 1vh) * 276);
+    top: calc(var(--vh, 1vh) * 279);
     left: calc(var(--vw, 1vw) * 0);
     line-height: 30px;
     font-size: 20px;
@@ -750,7 +752,7 @@ html, body {
     width: calc(var(--vw, 1vw) * 100);
     padding-top: 2%;
     height: calc(var(--vh, 1vh) * 15);
-    top: calc(var(--vh, 1vh) * 291);
+    top: calc(var(--vh, 1vh) * 294);
     left: calc(var(--vw, 1vw) * 0);
     line-height: 30px;
     font-size: 20px;
@@ -766,7 +768,7 @@ html, body {
     margin-top: unset;
     font-family:unset;
     height: calc(var(--vh, 1vh) * 10);
-    top: calc(var(--vh, 1vh) * 317);
+    top: calc(var(--vh, 1vh) * 323);
     background-color: rgb(255, 255, 255);
     width: calc(var(--vw, 1vw) * 100);
     align-items: center;
