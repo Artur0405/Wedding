@@ -237,9 +237,9 @@ window.addEventListener("load", () => {
 // _______________________________________________________________________________________________
 
 window.addEventListener("load", () => {
-  const ImgText1 = document.querySelector(".img-text.text1");
-  const ImgText2 = document.querySelector(".img-text.text2");
-  const ImgText3 = document.querySelector(".img-text.text3");
+  const ImgText1 = document.querySelector(".text1");
+  const ImgText2 = document.querySelector(".text2");
+  const ImgText3 = document.querySelector(".text3");
   const Header1 = document.querySelector(".head-1");
   const Header2 = document.querySelector(".head-2");
   const text1 = document.querySelector(".h1");

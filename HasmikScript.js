@@ -237,9 +237,9 @@ window.addEventListener("load", () => {
 // _______________________________________________________________________________________________
 
 window.addEventListener("load", () => {
-  const ImgText1 = document.querySelector(".img-text.text1");
-  const ImgText2 = document.querySelector(".img-text.text2");
-  const ImgText3 = document.querySelector(".img-text.text3");
+  const ImgText1 = document.querySelector(".text1");
+  const ImgText2 = document.querySelector(".text2");
+  const ImgText3 = document.querySelector(".text3");
   const Header1 = document.querySelector(".head-1");
   const Header2 = document.querySelector(".head-2");
   const text1 = document.querySelector(".h1");
@@ -276,12 +276,12 @@ window.addEventListener("load", () => {
   text2.style.setProperty("font-size", `${fontSize}px`, "important");
   text3.style.fontSize = `${fontSize}px`;
   text3.style.setProperty("font-size", `${fontSize}px`, "important");
-  text4.style.fontSize = `${fontSize}px`;
-  text4.style.setProperty("font-size", `${fontSize}px`, "important");
+  text4.style.fontSize = `${fontSize * 0.86}px`;
+  text4.style.setProperty("font-size", `${fontSize * 0.86}px`, "important");
   text5.style.fontSize = `${fontSize}px`;
   text5.style.setProperty("font-size", `${fontSize}px`, "important");
-  text6.style.fontSize = `${fontSize}px`;
-  text6.style.setProperty("font-size", `${fontSize}px`, "important");
+  text6.style.fontSize = `${fontSize * 0.86}px`;
+  text6.style.setProperty("font-size", `${fontSize * 0.86}px`, "important");
   text7.style.fontSize = `${fontSize}px`;
   text7.style.setProperty("font-size", `${fontSize}px`, "important");
   text8.style.fontSize = `${fontSize}px`;
