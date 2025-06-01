@@ -14,6 +14,16 @@ html, body {
   }
 
   @font-face {
+    font-family: 'Gayane_Reg';
+    src: url('fonts/GAA_Gayane_Reg_it.otf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Gayane_Bold';
+    src: url('fonts/GAAGayane-Medium_it.otf') format('truetype');
+  }
+
+  @font-face {
     font-family: 'Mshtakan';
     src: url('fonts/Mshtakan.ttf') format('truetype');
   }
@@ -511,16 +521,18 @@ html, body {
   
     /* Привязка текста к конкретным изображениям */
     .text1 { 
+      font-family: 'Gayane_Bold', sans-serif;
       box-sizing: border-box;
-      top: calc(var(--vh, 1vh) * 56);  
-      left: calc(var(--vw, 1vw) * -1); 
+      top: calc(var(--vh, 1vh) * 68);  
+      left: calc(var(--vw, 1vw) * 4); 
       letter-spacing: 2px;  width: 
       calc(var(--vw, 1vw) * 100); 
       background-color: rgba(255, 255, 255, 0);
-      color: rgb(203, 249, 255);
+      color: rgb(255, 255, 255);
       text-align: center;
     }
     .text2 { 
+      font-family: 'Gayane_Bold', sans-serif;
       box-sizing: border-box;
       top: calc(var(--vh, 1vh) * 61);  
       left: calc(var(--vw, 1vw) * 0); 
@@ -638,10 +650,12 @@ html, body {
   }
 
   .text-section  {
-    /* all: unset; */
     position: absolute;
     width: calc(var(--vw, 1vw) * 100);
-    font-family: "Mshatakan", serif;
+    font-family: "Gayane_Reg", serif;
+    /* line-height: 30px; */
+    letter-spacing: 2px;
+    font-weight: 400;
   }
 
   a {
@@ -705,6 +719,25 @@ html, body {
     padding-top: calc(var(--vh, 1vh) * 3.5);
   }
 
+  .text-section .p3_1 {
+    all: unset;
+    padding-inline: calc(var(--vw, 1vw) * 1);
+    position: absolute;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: calc(var(--vw, 1vw) * 40);
+    height: calc(var(--vh, 1vh) * 11);
+    top: calc(var(--vh, 1vh) * 163);
+    left: calc(var(--vw, 1vw) * 60);
+    font-size: 23px;
+    background-color: rgba(255, 255, 255, 0.518);
+    font-weight: 400;
+    border-radius: 0px;
+    padding-top: calc(var(--vh, 1vh) * 4);
+    font-family: "Gayane_Bold", serif;
+  }
+
   .text-section .p3 {
     all: unset;
     padding-inline: calc(var(--vw, 1vw) * 1);
@@ -713,11 +746,11 @@ html, body {
     display: block;
     text-align: center;
     width: calc(var(--vw, 1vw) * 40);
-    height: calc(var(--vh, 1vh) * 48);
-    top: calc(var(--vh, 1vh) * 163);
+    height: calc(var(--vh, 1vh) * 37);
+    top: calc(var(--vh, 1vh) * 174);
     left: calc(var(--vw, 1vw) * 60);
     font-size: 23px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.518);
     font-weight: 400;
     border-radius: 0px;
     padding-top: calc(var(--vh, 1vh) * 4);
@@ -739,6 +772,29 @@ html, body {
     font-weight: 400;
     border-radius: 0px;
   }
+
+  .text-section .p5_1 {
+    all: unset;
+    position: absolute;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    padding-inline: calc(var(--vw, 1vw) * 1);
+    width: calc(var(--vw, 1vw) * 40);
+    padding-top: 2%;
+    height: calc(var(--vh, 1vh) * 11);
+    top: calc(var(--vh, 1vh) * 231);
+    left: calc(var(--vw, 1vw) * 0);
+    line-height: 25px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    font-weight: 400;
+    border-radius: 0px;
+    padding-top: calc(var(--vh, 1vh) * 4);
+    font-family: "Gayane_Bold", serif;
+  }
+
+
   .text-section .p5 {
     all: unset;
     position: absolute;
@@ -748,8 +804,8 @@ html, body {
     padding-inline: calc(var(--vw, 1vw) * 1);
     width: calc(var(--vw, 1vw) * 40);
     padding-top: 2%;
-    height: calc(var(--vh, 1vh) * 48);
-    top: calc(var(--vh, 1vh) * 231);
+    height: calc(var(--vh, 1vh) * 37);
+    top: calc(var(--vh, 1vh) * 242);
     left: calc(var(--vw, 1vw) * 0);
     line-height: 25px;
     font-size: 20px;
