@@ -431,7 +431,7 @@ html, body {
       left: calc(var(--vw, 1vw) * 0);
       z-index: 2;
       padding-left: 0%;
-      height: calc(var(--vh, 1vh) * 400);
+      height: calc(var(--vh, 1vh) * 410);
       font-family: "Noto Serif Armenian", serif;
       font-weight: 300;
       z-index: 200;

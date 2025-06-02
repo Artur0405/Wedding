@@ -16,10 +16,10 @@ setFixedVh();
 setFixedVw();
 
 let screenHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--vh')) * 100;
-let virtualPageHeight = screenHeight * 3.7; // или 4, 5 — сколько "прокрутки" нужно
+let virtualPageHeight = screenHeight * 5.7; // или 4, 5 — сколько "прокрутки" нужно
 
 if (window.innerWidth <= 768) {
-  document.getElementById("scroll-wrapper").style.height = virtualPageHeight * 1.2 + "px";
+  document.getElementById("scroll-wrapper").style.height = virtualPageHeight * 1.15 + "px";
 } else {
   document.getElementById("scroll-wrapper").style.height = virtualPageHeight * ((33280/window.innerHeight) ** (1/5)) + "px";
 }
