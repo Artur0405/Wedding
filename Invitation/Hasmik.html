@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css?v=1.22">
+  <link rel="stylesheet" href="../style.css?v=1.23">
 </head>
 <body>
   <div id="scroll-wrapper"></div>
@@ -56,14 +56,14 @@
 
           <p class="p2">Ստորև կգտնեք ժամանակագրությունը՝</p>
           <p class="p3_1">Պսակադրություն՝
-          <p class="p3">Villa Hills
-          Սուրբ Աստվածածին Եկեղեցի <br><br><a href="https://yandex.com/navi/org/villa_hills/4851639316?si=71p5cpw97d813zue9v5b6c2uhg" target="_blank">ք. Երևան, Նորք-Մարաշ, Ա.Արմենակյան 225</a><br><br>
+          <p class="p3">
+          Սուրբ Մարիամ Աստվածածին Եկեղեցի <br><br><span class="p3_link" role="link" tabindex="0" onclick="window.open(' https://yandex.com/navi/org/15438436392?si=71p5cpw97d813zue9v5b6c2uhg')">ք. Երևան, Նորք-Մարաշ, Ա.Արմենակյան 225</span><br><br>
           Սկիզբը՝ 15:00</p>
-
+          
           <section class="p4"><div id="countdown"></div></section>
           <p class="p5_1">Տոնական ընթրիք՝
           <p class="p5">
-          «Վիլլա Հիլլս» ռեստորան,<br><br><a href="https://yandex.com/maps/-/CHCfE6PJ" target="_blank">Կոտայքի Մարզ,<br>Գյուղ Պտղնի</a> <br><br>
+          «Վիլլա Հիլլս» ռեստորան,<br><br><span class="p3_link" role="link" tabindex="0" onclick="window.open('https://yandex.com/navi/org/villa_hills/4851639316?si=71p5cpw97d813zue9v5b6c2uhg')">Կոտայքի Մարզ,<br>Գյուղ Պտղնի</span> <br><br>
           Սկիզբը՝ 17:30</p>
 
           <p class="p6">Խնդրում ենք նշել, արդյոք կկարողանաք ներկա գտնվել։</p>
@@ -73,18 +73,20 @@
           <form id="rsvp-form">
             <p class="form">Խնդրում ենք հաստատել մասնակցությունը</p>
           
-            <input type="text" name="name" placeholder="Ձեր անունը" required>
+            <input type="text" name="name" placeholder="Անուն Ազգանուն" required>
           
             <select name="attendance" id="attendance-select" required>
               <option value="">Կգաք՞ հարսանիքին</option>
               <option value="Այո">Այո՛, հաճույքով կմասնակցեմ</option>
               <option value="Ոչ">Ցավոք՝ չեմ կարող</option>
             </select>
+            <div id="extra-fields">
+              <input id="guests_number" type="number" name="guests" placeholder="Հյուրերի քանակը (ներառյալ՝ դուք)">
+            </div>
             <div id="extra_guests">
               <input id="guests" type="text" name="extra_guests" placeholder="Լրացուցիչ հյուրերի անունները" min="0" step="1" required>
             </div>
-            <div id="extra-fields">
-              <input id="guests_number" type="number" name="guests" placeholder="Հյուրերի քանակը (ներառյալ՝ դուք)">
+            <div id="extra-fields-message">
               <textarea name="message" placeholder="Ձեր հաղորդագրությունը (ըստ ցանկության)"></textarea>
             </div>
           
@@ -95,6 +97,6 @@
       </section>
     </div>
   </div>
-  <script src="../HasmikScript.js?v=1.09"></script>
+  <script src="../HasmikScript.js?v=1.10"></script>
 </body>
 </html>

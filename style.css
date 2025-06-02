@@ -115,6 +115,9 @@ html, body {
   #extra-fields {
     display: none;
   }
+  #extra-fields-message {
+    display: none;
+  }
 
   #guests {
     display: none;
@@ -658,12 +661,14 @@ html, body {
     font-weight: 400;
   }
 
-  a {
+  .p3_link {
     text-decoration: none;
+    cursor: pointer;
     color: rgb(145, 124, 0); /* или любой другой цвет */
   }
   
-  a:hover {
+  .p3_link:hover {
+    cursor: pointer;
     text-decoration: underline;
   }
   
@@ -871,7 +876,7 @@ html, body {
   
   .form {
     text-align: center;
-    font-family: "Mshtakan", serif;
+    font-family: "Gayane_Bold", serif;
     width: calc(var(--vw, 1vw) * 85);
     margin: 10px auto;
   }

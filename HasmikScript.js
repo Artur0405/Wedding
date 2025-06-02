@@ -128,6 +128,7 @@ requestAnimationFrame(updateParallax);
 const form = document.getElementById("rsvp-form");
 const attendanceSelect = document.getElementById("attendance-select");
 const extraFields = document.getElementById("extra-fields");
+const extraFieldsGuests = document.getElementById("extra-fields-message");
 const guestsNumber = document.getElementById("guests_number")
 const guests = document.getElementById("guests")
 attendanceSelect.addEventListener("change", function () {
@@ -135,15 +136,18 @@ attendanceSelect.addEventListener("change", function () {
     document.querySelector('input[name="guests"]').value = "1";
     if (guestsNumber.value === "1") {
       extraFields.style.display = "block";
+      extraFieldsGuests.style.display = "block";
       guests.style.display = "none"
       guests.required = false
     } else {
       extraFields.style.display = "block";
+      extraFieldsGuests.style.display = "block";
       guests.style.display = "block"
       guests.required = true
     }
   } else {
     extraFields.style.display = "none";
+    extraFieldsGuests.style.display = "none";
     guests.style.display = "none"
     guests.required = false
     document.querySelector('input[name="guests"]').value = "";
@@ -195,6 +199,7 @@ form.addEventListener("submit", function (e) {
         alert("Շնորհակալություն՝ պատասխանի համար ❤️");
         form.reset();
         extraFields.style.display = "none";
+        extraFieldsGuests.style.display = "none";
         guests.style.display = "none";
         guests.required = false;
       } else {
