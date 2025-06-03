@@ -222,7 +222,7 @@ form.addEventListener("submit", function (e) {
   window.addEventListener("load", function () {
     setTimeout(() => {
       window.scrollTo(0, 0);
-    }, 1000); // или 100 если нужно чуть позже
+    }, 50); // или 100 если нужно чуть позже
   });
 
 // Скрываем прелоадер после загрузки
