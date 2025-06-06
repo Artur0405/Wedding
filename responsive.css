@@ -1,0 +1,132 @@
+@media (max-width: 768px) {
+	#hero{
+		background-image: url('Assets/hero-bg-mobile.webp');
+		padding: 20px 30px 80px;
+	}
+
+	.hero-main-row{
+		flex: 1;
+		height: 100%;
+		max-height: unset;
+	}
+
+	.name-container{
+		flex: 1;
+		height: unset;
+	}
+
+	.date-container-relative{
+		gap: 15px;
+		height: min-content;
+	}
+	.date-container-absolute hr,
+	.date-container-relative hr{
+		height: 176px;
+	}
+
+	.hero-date{
+		font-size: 56px;
+		line-height: 68px;
+	}
+
+	.hero-notice{
+		margin-top: 30px;
+		font-size: 14px;
+		line-height: 19px;
+	}
+
+	.name-heading{
+		font-size: 40px;
+		line-height: 49px;
+	}
+
+	.time{
+		font-size: 40px;
+		line-height: 49px;
+	}
+	.timer {
+		gap: 20px;
+	}
+	.timer-label{
+		font-size: 12px;
+		line-height: 25px;
+	}
+
+	.location-paragraph-container p{
+		margin: 40px auto 0;
+		max-width: 300px;
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	.location-img-container{
+		height: 324px;
+	}
+
+	.location-img-container img{
+		margin: 40px auto 0;
+		width: 100%;
+		max-width: 380px;
+	}
+
+	.swiper {
+		width: 240px;
+		height: 280px;
+		max-width: 380px;
+		position: absolute;
+	}
+
+
+	.location-container h2{
+		margin: 90px auto 0;
+		font-size: 36px;
+		line-height: 44px;
+	}
+
+	.first-event{
+		margin-top: 50px;
+	}
+
+
+	.location-container hr{
+		height: 40px;
+	}
+
+	.event-time{
+		font-size: 24px;
+		line-height: 29px;
+	}
+
+	.event{
+		font-size: 10px;
+		line-height: 15px;
+	}
+
+	.location{
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	.location img {
+		width: 18px;
+	}
+
+	.restaurant-bg-mobile{
+		margin-top: 44px;
+	}
+
+	.event-icon {
+		width: 60px;
+	}
+
+	footer {
+		padding: 60px 0 30px;
+	}
+
+	.footer-logo{
+		width: 64px;
+	}
+	#playButton img{
+		width: 45px;
+	}
+}
