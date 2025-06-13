@@ -104,8 +104,8 @@
 					225 Armenak Armenakyan St, Yerevan
 				</span>
 			</div>
-			<hr/>
-			<div class="second-event  d-flex flex-column align-items-center">
+			<!-- <hr/> -->
+			<!-- <div class="second-event  d-flex flex-column align-items-center">
 				<img src="Assets/couple.png" alt="icon" class="event-icon">
 				<span class="event-time">17:00 - 17:30</span>
 				<span class="event">Civil registration ceremony in Villa Restaurant Complex</span>
@@ -113,7 +113,7 @@
 					<img src="Assets/location-icon.svg" alt="icon"/>
 					10/2, 15, Yerevan 0089
 				</span>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>
@@ -156,6 +156,37 @@
 		</div>
 	</div>
 </section>
+</section>
+<form id="rsvp-form">
+	<p class="form">Խնդրում ենք հաստատել մասնակցությունը</p>
+  
+	<input type="text" name="name" placeholder="Անուն Ազգանուն" required>
+  
+	<p class="form-a">Կգաք՞ հարսանիքին</p>
+	<div class="radio-group" id="attendance-select">
+		<label>
+		<input type="radio" name="attendance" value="Այո" required>
+		Իհարկե, սիրով կգամ
+		</label>
+		<label>
+		<input type="radio" name="attendance" value="Ոչ">
+		Ցավոք, չեմ կարողանա գալ
+		</label>
+	</div>
+	<div id="extra-fields">
+	  <input id="guests_number" type="number" name="guests" placeholder="Հյուրերի քանակը (ներառյալ՝ դուք)">
+	</div>
+	<div id="extra_guests">
+	  <input id="guests" type="text" name="extra_guests" placeholder="Լրացուցիչ հյուրերի անունները" min="0" step="1" required>
+	</div>
+	<div id="extra-fields-message">
+	  <textarea  name="message" placeholder="Ձեր հաղորդագրությունը (ըստ ցանկության)"></textarea>
+	</div>
+  
+	<button type="submit">Ուղարկել</button>
+	<p class="form_foot">Սիրով՝ Արթուր և Հասմիկ ♥</p>
+  </form>
+</section>
 <footer class="container-fluid">
 	<div class="col-12">
 		<img src="Assets/footer-logo.svg" alt="icon" class="d-block mx-auto footer-logo"/>
@@ -164,7 +195,7 @@
 <button id="playButton" class="position-fixed">
 	<img src="Assets/play-btn.svg" alt="Play">
 </button>
-<audio id="my_audio" src="Assets/autoplay.mp3" loop="loop"></audio>
+<audio id="my_audio" src="Assets/Everything.mp3" loop="loop"></audio>
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="index.js"></script>
