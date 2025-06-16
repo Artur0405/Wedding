@@ -24,7 +24,7 @@ body{
 
 
 #hero{
-	background-image: url('Assets/hero-bg.webp');
+	background-image: url('Assets/hero-bg-mobile.webp');
 	background-size: 100% 100%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -32,6 +32,7 @@ body{
 	height: 100vh;
 	padding: 66px 70px 50px;
 	min-height: 500px;
+	background-size: cover;
 }
 .hero-main-row{
 	height: 100%;

@@ -2,6 +2,7 @@
 	#hero{
 		background-image: url('Assets/hero-bg-mobile.webp');
 		padding: 20px 30px 80px;
+		background-size: cover;
 	}
 
 	.hero-main-row{
