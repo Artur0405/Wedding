@@ -193,6 +193,7 @@ body{
 }
 .first-event{
 	margin-top: 30px;
+	margin-bottom: 50px;
 }
 .location-container h2{
 	margin: 100px auto 0;
@@ -255,6 +256,7 @@ body{
 
 .second-events{
 	margin-top: 90px;
+	margin-bottom: 90px;
 }
 
 footer{
