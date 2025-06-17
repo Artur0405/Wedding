@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
 	#hero{
-		background-image: url('Assets/hero-bg-mobile.webp');
+		background-image: url('Assets/Hero_bg.webp');
 		padding: 20px 30px 80px;
 		background-size: cover;
 	}

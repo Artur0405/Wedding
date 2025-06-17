@@ -42,7 +42,7 @@ $(document).ready(function () {
 					$('.swiper').css('position', 'unset');
 					$('.swiper').fadeIn(500).css('opacity', 1);
 				}, 500);
-			}, 2000);
+			}, 20000);
 		}
 	});
 

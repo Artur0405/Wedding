@@ -24,7 +24,7 @@ body{
 
 
 #hero{
-	background-image: url('Assets/hero-bg-mobile.webp');
+	background-image: url('Assets/Hero_bg.webp');
 	background-size: 100% 100%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -165,26 +165,26 @@ body{
 }
 
 #slide1 {
-	background-image: url("Assets/slide3.webp");
+	background-image: url("Assets/Slide_1.webp");
 }
 
 #slide2 {
-	background-image: url("Assets/slide2.webp");
+	background-image: url("Assets/Slide_2.webp");
 }
 
 #slide3 {
-	background-image: url("Assets/slide1.webp");
+	background-image: url("Assets/Slide_3.webp");
 }
 
 #slide4 {
-	background-image: url("Assets/slide4.webp");
+	background-image: url("Assets/Slide_4.webp");
 }
 
 #slide5 {
-	background-image: url("Assets/slide5.webp");
+	background-image: url("Assets/Slide_5.webp");
 }
 #slide6 {
-	background-image: url("Assets/slide6.webp");
+	background-image: url("Assets/Slide_6.webp");
 }
 .location-img-container img{
 	cursor: pointer;
@@ -240,8 +240,8 @@ body{
 
 .restaurant-bg{
 	margin-top: 80px;
-	background-image: url('Assets/restaurant.webp');
-	background-size: 100% 100%;
+	background-image: url('Assets/Photo_1.webp');
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	max-height: 100vh;
