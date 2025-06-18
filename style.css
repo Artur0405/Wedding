@@ -398,3 +398,6 @@ footer{
 	box-shadow: 0 0 0 4px #000; /* обводка внешняя — как контур кольца */
   }
   
+  .footer-logo{
+	width: 100px;
+}

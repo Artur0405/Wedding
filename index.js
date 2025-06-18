@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	// Таймер обратного отсчёта
 	let countDownDate = new Date("2025-07-19T00:00:00").getTime();
 
 	const startTimer = () => {
@@ -23,6 +24,7 @@ $(document).ready(function () {
 	startTimer();
 	const x = setInterval(startTimer, 1000);
 
+	// Кнопка play/pause для аудио
 	$("#playButton").on("click", function () {
 		let audio = $("#my_audio").get(0);
 		if (audio.paused) {
@@ -34,6 +36,75 @@ $(document).ready(function () {
 		}
 	});
 
+
+	// Автозапуск с безопасной установкой параметров
+setTimeout(() => {
+	const video = $("#myVideo").get(0);
+	if (video) {
+		video.muted = true;       // обязательно установить программно
+		video.autoplay = true;
+		video.playsInline = true;
+
+		const playPromise = video.play();
+		if (playPromise !== undefined) {
+			playPromise
+				.then(() => {
+					console.log("✅ Видео запущено автоматически");
+				})
+				.catch((error) => {
+					console.warn("❗ Браузер заблокировал autoplay:", error);
+				});
+		}
+	}
+}, 300);  // Лучше 200–300 мс, чтобы DOM успел отрендериться
+
+// function tryStartVideo() {
+// 	const video = $("#myVideo").get(0);
+// 	if (video && video.paused) {
+// 		video.muted = true;
+// 		video.play()
+// 			.then(() => console.log("▶️ Видео запущено после взаимодействия"))
+// 			.catch(e => console.warn("🚫 Видео не запустилось:", e));
+// 	}
+// 	$(document).off("click touchstart wheel keydown mousemove", tryStartVideo);
+// }
+
+// // Назначаем обработчики на document, а не window
+// $(document).on("click touchstart wheel keydown mousemove", tryStartVideo);
+
+// let lastScrollY = window.scrollY;
+
+// function checkScrollActivity() {
+// 	const currentScrollY = window.scrollY;
+
+// 	if (Math.abs(currentScrollY - lastScrollY) > 5) {
+// 		console.log("📜 Зафиксировано движение скролла");
+// 		triggerVideoByScroll();
+// 	}
+
+// 	lastScrollY = currentScrollY;
+// }
+
+// // Повторяем проверку каждые 100 мс
+// let scrollMonitor = setInterval(checkScrollActivity, 100);
+
+// function triggerVideoByScroll() {
+// 	const video = $("#myVideo").get(0);
+// 	if (video && video.paused) {
+// 		video.muted = true;
+// 		video.play()
+// 			.then(() => {
+// 				console.log("▶️ Видео запущено после scroll");
+// 			})
+// 			.catch(e => console.warn("🚫 Видео кккккне запустилось:", e));
+// 	}
+
+// 	// Удаляем таймер после срабатывания
+// 	// clearInterval(scrollMonitor);
+// }
+
+
+	// Скрытие cover-изображения и показ слайдера
 	$(document).scroll(function () {
 		if ($('#slider-cover-img').is(":visible")) {
 			setTimeout(function () {
@@ -59,6 +130,7 @@ $(document).ready(function () {
 	}
 });
 
+// Инициализация Swiper
 let swiper = new Swiper(".mySwiper", {
 	effect: "cards",
 	grabCursor: true,
@@ -66,6 +138,7 @@ let swiper = new Swiper(".mySwiper", {
 	loop: true,
 });
 
+// === RSVP-форма ===
 
 const form = document.getElementById("rsvp-form");
 const guestsNumber = document.getElementById("guests_number");
@@ -74,99 +147,99 @@ const extraFields = document.getElementById("extra-fields");
 const extraFieldsGuests = document.getElementById("extra-fields-message");
 
 function getAttendanceValue() {
-  const selected = document.querySelector('input[name="attendance"]:checked');
-  return selected ? selected.value : "";
+	const selected = document.querySelector('input[name="attendance"]:checked');
+	return selected ? selected.value : "";
 }
 
 function updateExtraGuestsVisibility() {
-  const guestCount = parseInt(guestsNumber.value, 10);
-  const attendance = getAttendanceValue();
+	const guestCount = parseInt(guestsNumber.value, 10);
+	const attendance = getAttendanceValue();
 
-  if (attendance === "Այո" && guestCount > 1) {
-    guests.style.display = "block";
-    guests.required = true;
-  } else {
-    guests.style.display = "none";
-    guests.required = false;
-    form.extra_guests.value = "";
-  }
+	if (attendance === "Այո" && guestCount > 1) {
+		guests.style.display = "block";
+		guests.required = true;
+	} else {
+		guests.style.display = "none";
+		guests.required = false;
+		form.extra_guests.value = "";
+	}
 }
 
 function handleAttendanceChange() {
-  const attendance = getAttendanceValue();
+	const attendance = getAttendanceValue();
 
-  if (attendance === "Այո") {
-    form.guests.value = "";
+	if (attendance === "Այո") {
+		form.guests.value = "";
 
-    extraFields.style.display = "block";
-    extraFieldsGuests.style.display = "block";
+		extraFields.style.display = "block";
+		extraFieldsGuests.style.display = "block";
 
-    if (guestsNumber.value === "" || guestsNumber.value === "1") {
-      guests.style.display = "none";
-      guests.required = false;
-    } else {
-      guests.style.display = "block";
-      guests.required = true;
-    }
-  } else {
-    extraFields.style.display = "none";
-    extraFieldsGuests.style.display = "none";
-    guests.style.display = "none";
-    guests.required = false;
+		if (guestsNumber.value === "" || guestsNumber.value === "1") {
+			guests.style.display = "none";
+			guests.required = false;
+		} else {
+			guests.style.display = "block";
+			guests.required = true;
+		}
+	} else {
+		extraFields.style.display = "none";
+		extraFieldsGuests.style.display = "none";
+		guests.style.display = "none";
+		guests.required = false;
 
-    form.guests.value = "";
-    form.extra_guests.value = "";
-    form.message.value = "";
-  }
+		form.guests.value = "";
+		form.extra_guests.value = "";
+		form.message.value = "";
+	}
 }
 
 // Слушаем выбор радиокнопок
 document.querySelectorAll('input[name="attendance"]').forEach((radio) => {
-  radio.addEventListener("change", handleAttendanceChange);
+	radio.addEventListener("change", handleAttendanceChange);
 });
 
 // Слушаем ввод количества гостей
 guestsNumber.addEventListener("input", () => {
-  if (guestsNumber.value < 1) {
-    guestsNumber.value = 1;
-  }
-  updateExtraGuestsVisibility();
+	if (guestsNumber.value < 1) {
+		guestsNumber.value = 1;
+	}
+	updateExtraGuestsVisibility();
 });
 
-// Обработка формы
+// Обработка формы отправки
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
+	e.preventDefault();
 
-  const submitButton = form.querySelector("button[type='submit']");
-  submitButton.disabled = true;
-  submitButton.innerText = "Ուղարկվում է...";
+	const submitButton = form.querySelector("button[type='submit']");
+	submitButton.disabled = true;
+	submitButton.innerText = "Ուղարկվում է...";
 
-  const formData = new FormData(form);
+	const formData = new FormData(form);
 
-  fetch(GOOGLE_SCRIPT_URL, {
-    method: "POST",
-    body: formData,
-  })
-    .then((res) => res.text())
-    .then((text) => {
-      if (text.trim() === "OK") {
-        alert("Շնորհակալություն՝ պատասխանի համար ❤️");
-        form.reset();
-        extraFields.style.display = "none";
-        extraFieldsGuests.style.display = "none";
-        guests.style.display = "none";
-        guests.required = false;
-      } else {
-        console.warn("Սերվերի պատասխանը:", text);
-        alert("Տեղի ունեցավ սխալ։ Խնդրում ենք փորձել ավելի ուշ։");
-      }
-    })
-    .catch((err) => {
-      console.error("Fetch սխալ:", err);
-      alert("Տեղի ունեցավ սխալ։ Խնդրում ենք փորձել ավելի ուշ։");
-    })
-    .finally(() => {
-      submitButton.disabled = false;
-      submitButton.innerText = "Ուղարկել";
-    });
+	fetch(GOOGLE_SCRIPT_URL, {
+		method: "POST",
+		body: formData,
+	})
+		.then((res) => res.text())
+		.then((text) => {
+			if (text.trim() === "OK") {
+				alert("Շնորհակալություն՝ պատասխանի համար ❤️");
+				form.reset();
+				extraFields.style.display = "none";
+				extraFieldsGuests.style.display = "none";
+				guests.style.display = "none";
+				guests.required = false;
+			} else {
+				console.warn("Սերվերի պատասխանը:", text);
+				alert("Տեղի ունեցավ սխալ։ Խնդրում ենք փորձել ավելի ուշ։");
+			}
+		})
+		.catch((err) => {
+			console.error("Fetch սխալ:", err);
+			alert("Տեղի ունեցավ սխալ։ Խնդրում ենք փորձել ավելի ուշ։");
+		})
+		.finally(() => {
+			submitButton.disabled = false;
+			submitButton.innerText = "Ուղարկել";
+		});
 });

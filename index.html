@@ -10,7 +10,7 @@
 	<meta property="og:image:type" content="image/webp">
 	<meta property="og:image:width" content="372">
 	<meta property="og:image:height" content="435">
-	<link rel="icon" type="image/png" href="Assets/AH_black_on_white.ico">
+	<link rel="icon" href="Assets/AH_black_on_white.ico" type="image/x-icon">
 	<meta name="description" content="With joyful hearts, we invite you to join us to celebrate our love as we exchange vows and beginning of our journey together." >
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -151,8 +151,11 @@
 <section class="container-fluid">
 	<div class="row video-row">
 		<div class="col-12 video-row px-0">
-			<img src="Assets/5cb241cab7a34e629952eef30f6265de_V1.gif" alt="gif-video" class="w-100 d-none d-md-block"/>
-			<img src="Assets/5cb241cab7a34e629952eef30f6265de_V1.gif" alt="gif-video" class="w-100 d-block d-md-none"/>
+			<video id="myVideo" autoplay muted loop playsinline style="width: 100%; height: auto;">
+				<source src="Assets/output_overlay.mp4" type="video/mp4">
+			</video>
+			<!-- <img src="Assets/gif_videoo.webp" alt="gif-video" class="w-100 d-none d-md-block"/>
+			<img src="Assets/gif_videoo.webp" alt="gif-video" class="w-100 d-block d-md-none"/> -->
 		</div>
 	</div>
 </section>
@@ -189,7 +192,7 @@
 </section>
 <footer class="container-fluid">
 	<div class="col-12">
-		<img src="Assets/footer-logo.svg" alt="icon" class="d-block mx-auto footer-logo"/>
+		<img src="Assets/output.svg" alt="icon" class="d-block mx-auto footer-logo"/>
 	</div>
 </footer>
 <button id="playButton" class="position-fixed">
