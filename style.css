@@ -202,12 +202,13 @@ body{
 	line-height: 58.85px;
 	letter-spacing: -0.6000000238418579px;
 	text-align: center;
+	margin-bottom: 300px;
 
 }
 
 .location-container hr{
-	height: 87px;
-	width: 1px;
+	height: 1000px;
+	width: 300px;
 	border: none;
 	background: #000000;
 }
@@ -334,7 +335,7 @@ footer{
   }
   
   .form {
-	font-size: 20px;
+	font-size: 16px;
 	margin-bottom: 20px;
 	font-family: 'Gayane_Bold', serif;
   }
@@ -400,4 +401,18 @@ footer{
   
   .footer-logo{
 	width: 100px;
+}
+
+.expired-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px 0;
+}
+
+.expired-text {
+	font-size: 32px;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
 }

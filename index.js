@@ -6,6 +6,24 @@ $(document).ready(function () {
 		let now = new Date().getTime();
 		let distance = countDownDate - now;
 
+		if (distance <= 0) {
+			$(".timer").html(`
+				<div class="expired-wrapper text-center w-100">
+					<span class="expired-text">Today 🕊️</span>
+				</div>
+			`);
+			$(".hero-notice").text("Today is our Wedding 💍");
+			if (distance <= -86400000 ) {
+				$(".timer").html(`
+					<div class="expired-wrapper text-center w-100">
+						<span class="expired-text">We are already married 🕊️</span>
+					</div>
+				`);
+				$(".hero-notice").text("We are already married 💍");
+			}
+			return; // Останавливаем — не запускаем таймер
+		} 
+
 		let days = Math.floor(distance / (1000 * 60 * 60 * 24));
 		let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 		let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -16,10 +34,11 @@ $(document).ready(function () {
 		$("#minutes").text(minutes);
 		$("#seconds").text(seconds);
 
-		if (distance < 0) {
+
+		if (distance <= 0) {
 			clearInterval(x);
-			$(".timer").html("EXPIRED");
 		}
+
 	};
 	startTimer();
 	const x = setInterval(startTimer, 1000);
