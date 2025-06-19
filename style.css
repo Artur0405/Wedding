@@ -329,6 +329,7 @@ footer{
 	transition: border-bottom-width 0.3s ease;
 	transition: font-size 0.3s ease;
 	height: 40px;
+	border-radius: 0;
   }
   
   input:focus, textarea:focus, select:focus {
