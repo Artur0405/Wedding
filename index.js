@@ -1,5 +1,6 @@
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyuR5LnF3xWxNICdArS2MBHd6JDaZQZQL0q6ICpU-BgSEK9nyYK_vCdnR9BeAIXwa7_/exec";
+
 $(document).ready(function () {
-	// Таймер обратного отсчёта
 	let countDownDate = new Date("2025-07-19T00:00:00").getTime();
 
 	const startTimer = () => {
@@ -21,7 +22,7 @@ $(document).ready(function () {
 				`);
 				$(".hero-notice").text("We are already married 💍");
 			}
-			return; // Останавливаем — не запускаем таймер
+			return;
 		} 
 
 		let days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -43,7 +44,6 @@ $(document).ready(function () {
 	startTimer();
 	const x = setInterval(startTimer, 1000);
 
-	// Кнопка play/pause для аудио
 	$("#playButton").on("click", function () {
 		let audio = $("#my_audio").get(0);
 		if (audio.paused) {
@@ -56,11 +56,10 @@ $(document).ready(function () {
 	});
 
 
-	// Автозапуск с безопасной установкой параметров
 setTimeout(() => {
 	const video = $("#myVideo").get(0);
 	if (video) {
-		video.muted = true;       // обязательно установить программно
+		video.muted = true;
 		video.autoplay = true;
 		video.playsInline = true;
 
@@ -75,55 +74,8 @@ setTimeout(() => {
 				});
 		}
 	}
-}, 300);  // Лучше 200–300 мс, чтобы DOM успел отрендериться
+}, 300);
 
-// function tryStartVideo() {
-// 	const video = $("#myVideo").get(0);
-// 	if (video && video.paused) {
-// 		video.muted = true;
-// 		video.play()
-// 			.then(() => console.log("▶️ Видео запущено после взаимодействия"))
-// 			.catch(e => console.warn("🚫 Видео не запустилось:", e));
-// 	}
-// 	$(document).off("click touchstart wheel keydown mousemove", tryStartVideo);
-// }
-
-// // Назначаем обработчики на document, а не window
-// $(document).on("click touchstart wheel keydown mousemove", tryStartVideo);
-
-// let lastScrollY = window.scrollY;
-
-// function checkScrollActivity() {
-// 	const currentScrollY = window.scrollY;
-
-// 	if (Math.abs(currentScrollY - lastScrollY) > 5) {
-// 		console.log("📜 Зафиксировано движение скролла");
-// 		triggerVideoByScroll();
-// 	}
-
-// 	lastScrollY = currentScrollY;
-// }
-
-// // Повторяем проверку каждые 100 мс
-// let scrollMonitor = setInterval(checkScrollActivity, 100);
-
-// function triggerVideoByScroll() {
-// 	const video = $("#myVideo").get(0);
-// 	if (video && video.paused) {
-// 		video.muted = true;
-// 		video.play()
-// 			.then(() => {
-// 				console.log("▶️ Видео запущено после scroll");
-// 			})
-// 			.catch(e => console.warn("🚫 Видео кккккне запустилось:", e));
-// 	}
-
-// 	// Удаляем таймер после срабатывания
-// 	// clearInterval(scrollMonitor);
-// }
-
-
-	// Скрытие cover-изображения и показ слайдера
 	$(document).scroll(function () {
 		if ($('#slider-cover-img').is(":visible")) {
 			setTimeout(function () {
@@ -136,7 +88,6 @@ setTimeout(() => {
 		}
 	});
 
-	// Авторасширение textarea
 	const autoGrow = (element) => {
 		element.style.height = "auto";
 		element.style.height = element.scrollHeight + "px";
@@ -149,7 +100,6 @@ setTimeout(() => {
 	}
 });
 
-// Инициализация Swiper
 let swiper = new Swiper(".mySwiper", {
 	effect: "cards",
 	grabCursor: true,
@@ -157,7 +107,7 @@ let swiper = new Swiper(".mySwiper", {
 	loop: true,
 });
 
-// === RSVP-форма ===
+// === RSVP-form ===
 
 const form = document.getElementById("rsvp-form");
 const guestsNumber = document.getElementById("guests_number");
@@ -175,10 +125,10 @@ function updateExtraGuestsVisibility() {
 	const attendance = getAttendanceValue();
 
 	if (attendance === "Այո" && guestCount > 1) {
-		guests.style.display = "block";
+		$(guests).fadeIn();
 		guests.required = true;
-	} else {
-		guests.style.display = "none";
+	} else if (attendance === "Այո" && guestCount <= 1) {
+		$(guests).fadeOut();
 		guests.required = false;
 		form.extra_guests.value = "";
 	}
@@ -190,20 +140,20 @@ function handleAttendanceChange() {
 	if (attendance === "Այո") {
 		form.guests.value = "";
 
-		extraFields.style.display = "block";
-		extraFieldsGuests.style.display = "block";
+		$(extraFields).fadeIn();
+		$(extraFieldsGuests).fadeIn();
 
-		if (guestsNumber.value === "" || guestsNumber.value === "1") {
-			guests.style.display = "none";
+		if (guestsNumber.value <= 1) {
+			$(guests).fadeOut();
 			guests.required = false;
 		} else {
-			guests.style.display = "block";
+			$(guests).fadeIn();
 			guests.required = true;
 		}
 	} else {
-		extraFields.style.display = "none";
-		extraFieldsGuests.style.display = "none";
-		guests.style.display = "none";
+		$(extraFields).fadeOut();
+		$(extraFieldsGuests).fadeOut();
+		$(guests).fadeOut();
 		guests.required = false;
 
 		form.guests.value = "";
@@ -212,20 +162,17 @@ function handleAttendanceChange() {
 	}
 }
 
-// Слушаем выбор радиокнопок
 document.querySelectorAll('input[name="attendance"]').forEach((radio) => {
 	radio.addEventListener("change", handleAttendanceChange);
 });
 
-// Слушаем ввод количества гостей
 guestsNumber.addEventListener("input", () => {
-	if (guestsNumber.value < 1) {
-		guestsNumber.value = 1;
+	if (guestsNumber.value < 0) {
+		guestsNumber.value = 0;
 	}
 	updateExtraGuestsVisibility();
 });
 
-// Обработка формы отправки
 form.addEventListener("submit", function (e) {
 	e.preventDefault();
 
@@ -244,9 +191,9 @@ form.addEventListener("submit", function (e) {
 			if (text.trim() === "OK") {
 				alert("Շնորհակալություն՝ պատասխանի համար ❤️");
 				form.reset();
-				extraFields.style.display = "none";
-				extraFieldsGuests.style.display = "none";
-				guests.style.display = "none";
+				$(extraFields).fadeOut();
+				$(extraFieldsGuests).fadeOut();
+				$(guests).fadeOut();
 				guests.required = false;
 			} else {
 				console.warn("Սերվերի պատասխանը:", text);

@@ -57,7 +57,9 @@
 		margin: 40px auto 0;
 		max-width: 300px;
 		font-size: 16px;
-		line-height: 19px;
+		line-height: 22px;
+		margin-bottom: 30px;
+		margin-top: 60px;
 	}
 
 	.location-img-container{
@@ -82,16 +84,19 @@
 		margin: 90px auto 0;
 		font-size: 20px;
 		line-height: 44px;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
+		margin-top: 60px;
 	}
 
 	.first-event{
-		margin-top: 50px;
+		margin-top: 20px;
 	}
 
 
 	.location-container hr{
 		height: 1px;
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 
 	.event-time{
@@ -100,19 +105,20 @@
 	}
 
 	.event{
-		font-size: 10px;
+		font-size: 12px;
 		line-height: 15px;
 	}
 
 	.location{
 		font-size: 12px;
 		line-height: 18px;
+		letter-spacing: 0.7px;
 	}
 
 	.location:hover {
-		font-size: 13px;
+		font-size: 12.5px;
 		line-height: 18px;
-		color: rgb(17, 177, 177);
+		color: rgb(11, 116, 116);
 		cursor: pointer;
 	}
 
@@ -121,7 +127,8 @@
 	}
 
 	.restaurant-bg-mobile{
-		margin-top: 44px;
+		margin-top: 40px;
+		margin-bottom: 20px;
 	}
 
 	.event-icon {

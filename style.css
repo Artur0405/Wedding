@@ -3,7 +3,7 @@ html, body {
 	overflow-x: hidden !important;
 }
 
-body {
+   body {
 	scrollbar-width: none;       /* Firefox */
 	-ms-overflow-style: none;    /* Internet Explorer и Edge */
   }
@@ -21,6 +21,11 @@ body{
 	font-family: Edensor;
 	user-select: none;
 }
+
+  @font-face {
+    font-family: 'Barak';
+    src: url('fonts/Barak.ttf') format('truetype');
+  }
 
 
 #hero{
@@ -130,9 +135,10 @@ body{
 	margin: 80px auto 0;
 	max-width: 477px;
 	font-size: 30px;
-	font-weight: 400;
 	line-height: 36.78px;
 	text-align: center;
+	margin-bottom: 30px;
+	font-family: "Barak";
 }
 .location-img-container{
 	height: 618px;
@@ -193,24 +199,24 @@ body{
 }
 .first-event{
 	margin-top: 30px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 .location-container h2{
 	margin: 100px auto 0;
 	font-size: 48px;
-	font-weight: 400;
 	line-height: 58.85px;
-	letter-spacing: -0.6000000238418579px;
 	text-align: center;
-	margin-bottom: 300px;
-
+	margin-bottom: 200px;
+	font-family: "Barak";
 }
 
 .location-container hr{
-	height: 1000px;
-	width: 300px;
+	height: 1px;
+	width: 70vw;
 	border: none;
 	background: #000000;
+	margin-bottom: 60px;
+	margin-top: 70px;
 }
 
 .event-time{
@@ -218,26 +224,38 @@ body{
 	font-size: 40px;
 	font-weight: 400;
 	line-height: 49.04px;
-	letter-spacing: -0.6000000238418579px;
+	letter-spacing: 1px;
+	font-family: "Barak";
 }
 
 .event{
 	margin-top: 8px;
-	font-family: Poppins;
+	font-family: "Barak";
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 30px;
+	letter-spacing: 1px;
 	text-align: center;
 }
 
 .location{
 	margin-top: 4px;
-	font-family: Poppins;
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 36px;
 	text-align: center;
 	gap: 0;
+}
+
+.location:hover{
+	font-size: 26px;
+	color: rgb(11, 116, 116);
+	cursor: pointer;
+}
+
+.p3_link {
+	font-family: "Barak";
+	text-decoration: underline;
 }
 
 .restaurant-bg{
@@ -302,15 +320,28 @@ footer{
 	margin: 12px auto;
 	background: transparent;
 	border: none;
-	border-bottom: 2px solid #ccc;
+	border-bottom: 1.3px solid #000000;
 	padding: 8px 5px;
-	font-size: 15px;
+	font-size: 17px;
 	transition: border-color 0.3s ease;
+	transition: border-bottom-width 0.3s ease;
+	transition: font-size 0.3s ease;
+	height: 40px;
   }
   
   input:focus, textarea:focus, select:focus {
 	outline: none;
-	border-bottom-color: #000; /* можно любой акцентный цвет */
+	border-bottom: 1.3px solid #000000;
+  }
+
+  input::placeholder, textarea::placeholder, select::placeholder {
+	font-size: 17px;
+	transition: font-size 0.3s ease;
+	font-family: "Barak";
+  }
+
+  input:focus::placeholder, textarea:focus::placeholder, select:focus::placeholder {
+	font-size: 0px;
   }
   
   textarea {
@@ -335,15 +366,16 @@ footer{
   }
   
   .form {
+	margin-top: 70px;
 	font-size: 16px;
 	margin-bottom: 20px;
-	font-family: 'Gayane_Bold', serif;
+	font-family: "Barak";
   }
 
   .form_foot {
 	font-size: 13px;
 	margin-top: 20px;
-	font-family: 'Gayane_Bold', serif;
+	font-family: "Barak";
   }
 
   .form-a {
@@ -351,18 +383,24 @@ footer{
 	margin-bottom: 0;
 	font-size: 16px;
 	letter-spacing: 3px;
+	font-family: "Barak";
+  }
+
+  .form-input {
+	max-width: 500px;
   }
   
 
   .radio-group {
 	display: flex;
-	/* flex-direction: column; */
 	align-items: flex-start;
 	margin: 10px auto;
 	margin-bottom: -10px;
 	gap: 20px;
 	width: fit-content;
 	font-size: 16px;
+	font-family: "Barak";
+	letter-spacing: 1px;
 }
 
 .radio-group label {
@@ -370,8 +408,8 @@ footer{
 	align-items: center;
 	margin-bottom: 10px;
 	cursor: pointer;
-	font-family: 'Edensor', sans-serif;
-	font-size: 12px;
+	font-family: "Barak";
+	font-size: 14px;
 }
 
 .radio-group input[type="radio"] {
