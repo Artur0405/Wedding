@@ -316,6 +316,12 @@ footer{
 	text-align: center;
 	padding: 20px 0;
   }
+
+  input, textarea, select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
   
   input, textarea, select {
 	width: calc(var(--vw, 1vw) * 80);
@@ -328,10 +334,20 @@ footer{
 	transition: border-color 0.3s ease;
 	transition: border-bottom-width 0.3s ease;
 	transition: font-size 0.3s ease;
-	height: 40px;
+	height: 30px;
 	border-radius: 0;
   }
-  
+
+  textarea {
+	overflow: hidden;          /* скрывает скролл */
+  	resize: none; 
+	padding: 13px 5px;
+  }
+
+  textarea::placeholder {
+	padding: 2px 0px;
+  }
+
   input:focus, textarea:focus, select:focus {
 	outline: none;
 	border-bottom: 1.3px solid #000000;
