@@ -400,7 +400,7 @@ footer{
 	width: fit-content;
 	font-size: 13px;
 	font-family: "Barak";
-	letter-spacing: 0.8px;
+	letter-spacing: 0.55px;
 }
 
 .radio-group label {
@@ -409,7 +409,7 @@ footer{
 	margin-bottom: 10px;
 	cursor: pointer;
 	font-family: "Barak";
-	font-size: 14px;
+	font-size: 13px;
 }
 
 .radio-group input[type="radio"] {
@@ -438,7 +438,7 @@ footer{
   }
   
   .footer-logo{
-	width: 100px;
+	width: 200px;
 }
 
 .expired-wrapper {
