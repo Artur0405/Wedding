@@ -146,4 +146,9 @@
 	#playButton img{
 		width: 45px;
 	}
+
+	input::placeholder, textarea::placeholder, select::placeholder {
+		font-size: 11px;
+	  }
+
 }
