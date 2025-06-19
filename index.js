@@ -170,6 +170,7 @@ guestsNumber.addEventListener("input", () => {
 	if (guestsNumber.value < 0) {
 		guestsNumber.value = 0;
 	}
+	guestsNumber.value = guestsNumber.value.replace(/[^0-9]/g, "");
 	updateExtraGuestsVisibility();
 });
 
