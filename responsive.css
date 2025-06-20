@@ -148,7 +148,7 @@
 	}
 
 	input::placeholder, textarea::placeholder, select::placeholder {
-		font-size: 13px;
+		font-size: 14px;
 	  }
 
 }
